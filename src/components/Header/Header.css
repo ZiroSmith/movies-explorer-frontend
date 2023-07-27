@@ -1,9 +1,16 @@
 .header {
   background-color: #073042;
+  margin: 0 auto;
+}
+
+.header__container {
+  background-color: #073042;
+  max-width: 1280px;
   width: 100%;
   height: 74px;
   display: flex;
   justify-content: space-between;
+  margin: 0 auto;
 }
 
 .header__logo {

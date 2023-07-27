@@ -1,14 +1,21 @@
 .promo {
   background-color: #073042;
+  margin: 0 auto;
+
+}
+
+.promo__container {
+  background-color: #073042;
+  max-width: 1280px;
   width: 100%;
   height: 574px;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   display: flex;
   justify-content: space-between;
 }
 
-.promo__container {
+.promo__info {
   margin-left: 70px;
   display: flex;
   flex-direction: column;

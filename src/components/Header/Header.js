@@ -8,7 +8,8 @@ function Header({ loggedEmail, signOut }) {
   //вернуть в импорт useLocation после Link
 
   return (
-    <section className="header">
+    <header className="header">
+      <section className="header__container">
       <img className="header__logo" src={headerLogo} alt="Логотип" />
       <div className='header__navbar'>
         <Link to="/sign-up" className="header__link">
@@ -37,6 +38,8 @@ function Header({ loggedEmail, signOut }) {
       )} */}
       </div>
     </section>
+    </header>
+    
   );
 }
 
