@@ -5,8 +5,11 @@ function FilterCheckbox() {
   return (
     <section className="filtercheckbox">
       <div className='filtercheckbox__container'>
-        <h2 className='filtercheckbox__title'>FilterCheckbox</h2>
-        <div className='filtercheckbox__info'></div>
+        <label class="filtercheckbox__switch">
+          <input type="checkbox" />
+          <span class="filtercheckbox__slider filtercheckbox__round"></span>
+        </label>
+        <h2 className='filtercheckbox__title'>Короткометражки</h2>
       </div>
     </section>
   );

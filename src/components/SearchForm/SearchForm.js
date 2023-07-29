@@ -1,12 +1,14 @@
 import './SearchForm.css';
 import React from "react";
+import FilterCheckbox from '../FilterCheckbox/FilterCheckbox';
 
 function SearchForm() {
   return (
-    <section className="searchForm">
-      <div className='searchForm__container'>
-        <h2 className='searchForm__title'>SearchForm</h2>
-        <div className='searchForm__info'></div>
+    <section className="search">
+      <div className='search__container'>
+        <h2 className='search__title'>Фильм</h2>
+        <div className='search__info'></div>
+        <FilterCheckbox />
       </div>
     </section>
   );
