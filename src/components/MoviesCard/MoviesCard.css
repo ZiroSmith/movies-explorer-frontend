@@ -1,4 +1,72 @@
-.header {
-  padding: 0;
+.moviesCard {
+  background-color:#202020;
   margin: 0;
+  padding: 0;
+}
+
+.moviesCard__container {
+  margin: 0;
+  padding: 0;
+}
+
+.moviesCard__element {
+  margin: 0;
+  padding: 0;
+  border: 1px solid red;
+  width: 270px;
+  height: 218px;
+}
+
+.moviesCard__image {
+  margin: 0;
+  padding: 0;
+  width: 270px;
+  height: 151px;
+}
+
+.moviesCard__name {
+  margin: 0;
+  padding: 0;
+  border: 1px solid red;
+  display: flex;
+  justify-content: space-between;
+}
+
+.moviesCard__title {
+  margin: 0;
+  padding: 14px 0 0;
+  font-style: normal;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+  color: white;
+}
+
+.moviesCard__text {
+  margin: 0;
+  padding: 10px 0 0;
+  text-align: left;
+  font-style: normal;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 13px;
+  color: #8B8B8B;
+}
+
+.moviesCard__btn {
+  cursor: pointer;
+  background-image: url(../../images/not_save_btn.svg);
+  width: 30px;
+  border: none;
+  background-size: cover;
+  background-position: left;
+  background-color: inherit;
+}
+
+.moviesCard__btn:hover {
+  opacity: 0.8;
+}
+
+.moviesCard__btn_active {
+  background-image: url(../../images/save_btn.svg);
 }
