@@ -1,9 +1,8 @@
-import './Header.css';
+import "./Header.css";
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import headerLogo from "../../images/logo.svg";
 import accountLogo from "../../images//icon__account.svg";
-
 
 function Header() {
   const location = useLocation();
@@ -13,30 +12,48 @@ function Header() {
       {location.pathname === "/" && (
         <section className="header">
           <div className="header__container">
-            <img className="header__logo" src={headerLogo} alt="Логотип" />
-            <div className='header__navbar'>
-              <Link to="/sign-up" className="header__link">Регистрация</Link>
-              <Link to="/sign-in" className="header__sign-in">Войти</Link>
+            <Link to="/">
+              <img className="header__logo" src={headerLogo} alt="Логотип" />
+            </Link>
+            <div className="header__navbar">
+              <Link to="/signup" className="header__link">
+                Регистрация
+              </Link>
+              <Link to="/signin" className="header__sign-in">
+                Войти
+              </Link>
             </div>
           </div>
-        </section> 
+        </section>
       )}
-      {location.pathname === "/movies" && (
+      {(location.pathname === "/movies" ||
+        location.pathname === "/saved-movies" ||
+        location.pathname === "/profile") && (
         <section className="header_dark">
           <div className="header__container_dark">
-            <img className="header__logo" src={headerLogo} alt="Логотип" />
-            <div className='header__navbar'>
-              <Link to="/movies" className="header__link">Фильмы</Link>
-              <Link to="/saved-movies" className="header__link">Сохранённые фильмы</Link>
+            <Link to="/">
+              <img className="header__logo" src={headerLogo} alt="Логотип" />
+            </Link>
+            <div className="header__navbar">
+              <Link to="/movies" className="header__link">
+                Фильмы
+              </Link>
+              <Link to="/saved-movies" className="header__link">
+                Сохранённые фильмы
+              </Link>
             </div>
             <Link to="/profile" className="header__link header__link_container">
-              <p className='header__link_text'>Аккаунт</p>
+              <p className="header__link_text">Аккаунт</p>
               <div className="header__logo_container">
-                <img className="header__link_logo" src={accountLogo} alt="Логотип аккаунта" />
+                <img
+                  className="header__link_logo"
+                  src={accountLogo}
+                  alt="Логотип аккаунта"
+                />
               </div>
             </Link>
           </div>
-        </section> 
+        </section>
       )}
     </header>
   );

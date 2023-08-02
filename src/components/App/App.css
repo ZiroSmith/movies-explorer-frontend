@@ -1,5 +1,5 @@
 .App {
-  font-family: 'Inter', "Arial", "Helvetica", sans-serif;
+  font-family: "Inter", "Arial", "Helvetica", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
@@ -11,5 +11,7 @@
   margin: 0 auto;
   padding: 0;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  background-color: #202020;
 }
-

@@ -1,21 +1,21 @@
 import React from "react";
-import "./Movies.css";
+import "./SavedMovies.css";
 
 import SearchForm from "../SearchForm/SearchForm";
 import Preloader from "../Preloader/Preloader";
 import MoviesCardList from "../MoviesCardList/MoviesCardList";
-import { moviesCardArray } from "../../utils/constans";
+import { savedMoviesCardArray } from "../../utils/constans";
 
-function Movies() {
+function SavedMovies() {
   return (
-    <main className="movies">
+    <main className="savedMovies">
       <section>
         <SearchForm />
         <Preloader />
-        <MoviesCardList moviesCardArray={moviesCardArray} />
+        <MoviesCardList moviesCardArray={savedMoviesCardArray} />
       </section>
     </main>
   );
 }
 
-export default Movies;
+export default SavedMovies;
