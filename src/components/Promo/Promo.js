@@ -1,5 +1,6 @@
 import "./Promo.css";
 import React from "react";
+import { Link } from "react-scroll";
 import landingLogo from "../../images/landing-logo.svg";
 
 function Promo() {
@@ -15,7 +16,7 @@ function Promo() {
           <p className="promo__text">
             Листайте ниже, чтобы узнать больше про этот проект и его создателя.
           </p>
-          <button className="promo__button">Узнать больше</button>
+          <Link to='about' className="promo__link">Узнать больше</Link>
         </div>
         <img className="promo__landing" src={landingLogo} alt="Лэндинг" />
       </div>

@@ -75,6 +75,11 @@
   line-height: 20px;
 }
 
+.aboutme__info_link:hover {
+  opacity: .5;
+  transition: .3s;
+}
+
 .aboutme__info_link:visited {
   color: white;
 }

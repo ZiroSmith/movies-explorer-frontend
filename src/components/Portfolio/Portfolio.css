@@ -63,6 +63,13 @@
   line-height: 60px;
 }
 
+.portfolio__link:hover {
+  opacity: .5;
+  transition: .3s;
+}
+
+
+
 .portfolio__link:visited {
   color: white;
 }

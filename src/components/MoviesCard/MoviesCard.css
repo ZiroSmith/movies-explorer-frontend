@@ -66,8 +66,8 @@
 }
 
 .moviesCard__btn:hover {
-  opacity: 0.8;
-  transition: 0.5s;
+  opacity: .5;
+  transition: 0.3s;
 }
 
 .moviesCard__btn_active {

@@ -84,8 +84,8 @@
 }
 
 .profile__button_edit:hover {
-  opacity: 0.8;
-  transition: 0.5s;
+  opacity: .5;
+  transition: .3s;
 }
 
 .profile__button_exit {
@@ -103,6 +103,6 @@
 }
 
 .profile__button_exit:hover {
-  opacity: 0.8;
-  transition: 0.5s;
+  opacity: .5;
+  transition: .3s;
 }

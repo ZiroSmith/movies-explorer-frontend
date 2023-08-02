@@ -5,39 +5,43 @@ import headerLogo from "../../images/logo.svg";
 
 function Login() {
   return (
-    <section className="login">
-      <div className="login__container">
-        <Link to="/">
-          <img className="login__logo" src={headerLogo} alt="Логотип" />
+    <section className="signin">
+      <div className="signin__container">
+        <Link to="/" >
+          <img className="signin__logo" src={headerLogo} alt="Логотип" />
         </Link>
-        <p className="login__welcome">Рады видеть!</p>
-        <form className="login__form">
+        <p className="signin__welcome">Рады видеть!</p>
+        <form className="signin__form">
+          <label className="signin__form_label">E-mail</label>
           <input
             id="email"
-            className="login__input"
+            className="signin__form__input"
             name="email"
             type="email"
             value="pochta@yandex.ru"
             placeholder="Email"
           />
+          <span className="signin__form_error"></span>
+          <label className="signin__form_label">Пароль</label>
           <input
             id="password"
-            className="login__input"
+            className="signin__form__input"
             name="password"
             type="password"
             value="password"
             placeholder="Пароль"
           />
-          <div className="login__button">
-            <button type="submit" className="login__link">
+          <span className="signin__form_error">Что-то пошло не так...</span>
+          <div className="signin__button">
+            <button type="submit" className="signin__link">
               Войти
             </button>
           </div>
         </form>
-        <div className="login__signin">
-          <p className="login__text">Ещё не зарегистрированы?</p>
-          <Link to="/signup" className="login__login-link">
-            Регистрация
+        <div className="signin__signin">
+          <p className="signin__text">Ещё не зарегистрированы?</p>
+          <Link to="/signup" className="signin__login-link">
+            Зарегистрироваться
           </Link>
         </div>
       </div>

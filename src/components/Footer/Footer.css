@@ -51,6 +51,11 @@
   text-decoration: none;
 }
 
+.footer__info_link:hover {
+  opacity: .5;
+  transition: .3s;
+}
+
 .footer__info_link:visited {
   color: white;
 }

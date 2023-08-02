@@ -31,6 +31,6 @@
 }
 
 .moviesCardList__button:hover {
-  opacity: 0.8;
-  transition: 0.5s;
+  opacity: .5;
+  transition: .3s;
 }
