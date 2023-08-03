@@ -1,7 +1,6 @@
 .aboutme {
   background-color: #202020;
   width: 100%;
-  height: 579px;
 }
 
 .aboutme__container {
@@ -19,7 +18,7 @@
   font-weight: 400;
   line-height: 58px;
   text-align: left;
-  padding: 110px 0 0 70px;
+  padding: 96px 0 8px 70px;
   margin: 0;
 }
 
@@ -33,9 +32,9 @@
 }
 
 .aboutme__info_container {
-  padding: 66px 0 0;
+  padding: 60px 0 0;
   margin: 23px 0 0;
-  width: 600px;
+  max-width: 600px;
 }
 
 .aboutme__info_title {
@@ -49,16 +48,16 @@
 
 .aboutme__info_subtitle {
   padding: 0;
-  margin: 30px 0 0;
+  margin: 34px 0 0;
   font-style: normal;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 400;
   line-height: 20px;
 }
 
 .aboutme__info_text {
   padding: 0;
-  margin: 26px 0 99px;
+  margin: 28px 0 104px;
   font-style: normal;
   font-size: 14px;
   font-weight: 400;
@@ -87,5 +86,11 @@
 .aboutme__image {
   padding: 0;
   margin: 66px 0 0;
-  width: 270px;
+  max-width: 270px;
+}
+
+@media screen and (max-width: 1024px) {
+  .aboutme__info {
+    max-width: 668px;
+  }
 }

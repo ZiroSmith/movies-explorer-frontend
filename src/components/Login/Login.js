@@ -41,7 +41,7 @@ function Login() {
         <div className="signin__signin">
           <p className="signin__text">Ещё не зарегистрированы?</p>
           <Link to="/signup" className="signin__login-link">
-            Зарегистрироваться
+            Регистрация
           </Link>
         </div>
       </div>

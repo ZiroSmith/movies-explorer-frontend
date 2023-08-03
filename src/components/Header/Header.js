@@ -34,11 +34,11 @@ function Header() {
             <Link to="/">
               <img className="header__logo" src={headerLogo} alt="Логотип" />
             </Link>
-            <div className="header__navbar">
+            <div className="header__navbar header__navbar_dark">
               <Link to="/movies" className={`${
                   location.pathname === "/movies"
-                    ? "header__link header__link_active"
-                    : "header__link"
+                    ? "header__link header__link_dark header__link_active"
+                    : "header__link header__link_dark"
                 }`}>
                 Фильмы
               </Link>
