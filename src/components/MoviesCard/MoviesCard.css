@@ -12,8 +12,8 @@
 .moviesCard__element {
   margin: 0;
   padding: 0;
-  width: 270px;
-  height: 218px;
+  max-width: 270px;
+  min-height: 218px;
   background-color: #222222;
   border-radius: 10px;
 }
@@ -21,8 +21,8 @@
 .moviesCard__image {
   margin: 0;
   padding: 0;
-  width: 270px;
-  height: 151px;
+  max-width: 270px;
+  min-height: 151px;
 }
 
 .moviesCard__name {
@@ -81,4 +81,28 @@
   height: 16px;
   padding: 0;
   margin: 11px 12px 10px 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .moviesCard__element {
+    max-width: 339px;
+    min-height: 257px;
+  }
+  
+  .moviesCard__image {
+    max-width: 339px;
+    min-height: 190px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .moviesCard__element {
+    max-width: 300px;
+    min-height: 235px;
+  }
+  
+  .moviesCard__image {
+    max-width: 300px;
+    min-height: 168px;
+  }
 }

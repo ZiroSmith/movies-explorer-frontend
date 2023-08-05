@@ -13,7 +13,7 @@ function Footer() {
         <section className="footer">
           <div className="footer__container">
             <h2 className="footer__title">
-              Учебный проект Яндекс.практикум x BeatFilm.
+              Учебный проект Яндекс.Практикум x BeatFilm.
             </h2>
             <div className="footer__info">
               <p className="footer__info_date">&#169;2023</p>

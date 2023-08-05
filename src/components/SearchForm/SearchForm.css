@@ -16,7 +16,7 @@
 .search__input_container {
   background-color: #202020;
   color: white;
-  width: 1140px;
+  max-width: 1140px;
   width: 100%;
   border-bottom: 1px solid #424242;
   margin: 0;
@@ -31,7 +31,7 @@
   padding: 0;
   margin: 70px 0 13px;
   color: #8b8b8b;
-  width: 1000px;
+  max-width: 1000px;
   text-align: left;
   font-style: normal;
   font-size: 28px;
@@ -56,4 +56,44 @@
 .search__input_button:hover {
   opacity: .5;
   transition: .3s;
+}
+
+@media screen and (max-width: 1024px) {
+  .search__container {
+    max-width: 708px;
+  }
+  
+  .search__input_container {
+    max-width: 708px;
+  }
+
+  .search__input {
+    margin: 80px 0 13px;
+    max-width: 600px;
+  }
+
+  .search__input_button {
+    margin: 80px 0 0;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .search__container {
+    max-width: 292px;
+  }
+  
+  .search__input_container {
+    max-width: 292px;
+  }
+
+  .search__input {
+    margin: 90px 0 14px;
+    max-width: 200px;
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .search__input_button {
+    margin: 85px 0 0;
+  }
 }

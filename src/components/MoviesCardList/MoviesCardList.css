@@ -14,6 +14,12 @@
   flex-wrap: wrap;
   gap: 32px 20px;
   box-sizing: border-box;
+  list-style-type: none;
+}
+
+.moviesCardList__element {
+  margin: 0;
+  padding: 0;
 }
 
 .moviesCardList__button {
@@ -36,4 +42,35 @@
 .moviesCardList__button:hover {
   opacity: .5;
   transition: .3s;
+}
+
+@media screen and (max-width: 1024px) {
+  .moviesCardList__container {
+    max-width: 768px;
+    padding: 84px 0 0 30px;
+    gap: 36px 30px;
+  }
+
+  .width_768 {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .moviesCardList__container {
+    max-width: 320px;
+    padding: 44px 0 0 10px;
+    gap: 20px 30px;
+  }
+
+  .width_320 {
+    display: none;
+  }
+
+  .moviesCardList__button {
+    margin: 80px auto 155px;
+    padding: 0;
+    width: 240px;
+    height: 36px;
+  }
 }

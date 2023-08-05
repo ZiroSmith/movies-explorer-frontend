@@ -5,7 +5,6 @@
 
 .aboutme__container {
   background-color: #202020;
-  height: 608px;
   color: white;
   max-width: 1280px;
   width: 100%;
@@ -20,11 +19,12 @@
   text-align: left;
   padding: 96px 0 8px 70px;
   margin: 0;
+  letter-spacing: -1.2px;
 }
 
 .aboutme__info {
   text-align: left;
-  width: 1140px;
+  max-width: 1140px;
   margin: 0 70px;
   border-top: 1px solid #dadada;
   display: flex;
@@ -44,6 +44,7 @@
   font-size: 50px;
   font-weight: 400;
   line-height: 24px;
+  letter-spacing: -1.8px;
 }
 
 .aboutme__info_subtitle {
@@ -90,7 +91,90 @@
 }
 
 @media screen and (max-width: 1024px) {
+  .aboutme__title {
+    font-style: normal;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 58px;
+    text-align: left;
+    padding: 76px 0 8px 50px;
+    margin: 0;
+  }
+
   .aboutme__info {
     max-width: 668px;
+    margin: 0 50px;
+  }
+
+  .aboutme__info_container {
+    padding: 43px 0 0;
+    max-width: 364px;
+  }
+
+  .aboutme__info_title {
+    font-size: 40px;
+    line-height: 40px;
+  }
+  
+  .aboutme__info_subtitle {
+    margin: 15px 0 0;
+    font-size: 12px;
+    line-height: 18px;
+  }
+  
+  .aboutme__info_text {
+    margin: 20px 0 86px;
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .aboutme__image {
+    max-width: 255px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .aboutme__title {
+    font-size: 18px;
+    line-height: 22px;
+    text-align: left;
+    padding: 50px 0 28px 15px;
+    margin: 0;
+    letter-spacing: -1px;
+  }
+
+  .aboutme__info {
+    max-width: 292px;
+    margin: 0 15px;
+    flex-direction: column-reverse;
+  }
+
+  .aboutme__info_container {
+    padding: 40px 0 0;
+    margin: 0;
+    max-width: 364px;
+  }
+
+  .aboutme__info_title {
+    font-size: 30px;
+    line-height: 36px;
+    letter-spacing: -1.3px;
+  }
+  
+  .aboutme__info_subtitle {
+    margin: 20px 0 0;
+    font-size: 11px;
+    line-height: 16px;
+  }
+  
+  .aboutme__info_text {
+    margin: 20px 0 40px;
+    font-size: 11px;
+    line-height: 16px;
+  }
+
+  .aboutme__image {
+    max-width: 292px;
+    margin: 60px 0 0;
   }
 }

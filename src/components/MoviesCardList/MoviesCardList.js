@@ -2,16 +2,60 @@ import "./MoviesCardList.css";
 import React from "react";
 import MoviesCard from "../MoviesCard/MoviesCard";
 
-function MoviesCardList({ moviesCardArray }) {
+function MoviesCardList() {
+  
   return (
     <section className="moviesCardList">
-      <div className="moviesCardList__container">
-        {moviesCardArray.map((card) => {
-          return (
-            <MoviesCard image={card.image} name={card.name} time={card.time} />
-          );
-        })}
-      </div>
+      <ul className="moviesCardList__container">
+            <li className='moviesCardList__element'>
+              <MoviesCard />
+            </li>
+            <li className='moviesCardList__element'>
+              <MoviesCard />
+            </li>
+            <li className='moviesCardList__element'>
+              <MoviesCard />
+            </li>
+            <li className='moviesCardList__element'>
+              <MoviesCard />
+            </li>
+            <li className='moviesCardList__element'>
+              <MoviesCard />
+            </li>
+            <li className='moviesCardList__element width_320'>
+              <MoviesCard />
+            </li>
+            <li className='moviesCardList__element width_320'>
+              <MoviesCard />
+            </li>
+            <li className='moviesCardList__element width_320'>
+              <MoviesCard />
+            </li>
+            <li className='moviesCardList__element width_768'>
+              <MoviesCard />
+            </li>
+            <li className='moviesCardList__element width_768'>
+              <MoviesCard />
+            </li>
+            <li className='moviesCardList__element width_768'>
+              <MoviesCard />
+            </li>
+            <li className='moviesCardList__element width_768'>
+              <MoviesCard />
+            </li>
+            <li className='moviesCardList__element width_768'>
+              <MoviesCard />
+            </li>
+            <li className='moviesCardList__element width_768'>
+              <MoviesCard />
+            </li>
+            <li className='moviesCardList__element width_768'>
+              <MoviesCard />
+            </li>
+            <li className='moviesCardList__element width_768'>
+              <MoviesCard />
+            </li>
+      </ul>
       <button className="moviesCardList__button">Ещё</button>
     </section>
   );

@@ -20,6 +20,7 @@
   text-align: left;
   padding: 95px 0 8px;
   margin: 0;
+  letter-spacing: -0.8px;
 }
 
 .about__info {
@@ -28,7 +29,7 @@
   margin: 0 auto;
   border-top: 1px solid #dadada;
   display: flex;
-  gap: 40px;
+  gap: 50px;
 }
 
 .about__info_container {
@@ -43,6 +44,7 @@
   font-size: 20px;
   font-weight: 400;
   line-height: 24px;
+  letter-spacing: -0.8px;
 }
 
 .about__info_text {
@@ -122,12 +124,23 @@
     max-width: 768px;
   }
 
+  .about__title {
+    padding: 75px 0 8px;
+  }
+
   .about__info {
     max-width: 668px;
+    gap: 40px;
   }
 
   .about__title {
     margin-left: 50px;
+  }
+
+  .about__info_text {
+    margin: 22px 0 0;
+    font-size: 12px;
+    line-height: 18px;
   }
 
   .about__time {
@@ -136,13 +149,94 @@
 
   .about__backend {
     padding: 0;
-    margin: 110px 0 0;
-    width: 20%;
+    margin: 92px 0 0;
+    width: 21%;
   }
 
   .about__frontend {
     padding: 0;
-    margin: 110px 0 0;
+    margin: 95px 0 0;
     width: 80%;
+  }
+
+  .about__frontend_text {
+    margin: 12px 0 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .about__container {
+    max-width: 320px;
+  }
+
+  .about__title {
+    font-size: 18px;
+    line-height: 22px;
+    padding: 70px 0 0;
+    margin-left: 18px;
+    letter-spacing: -0.8px;
+  }
+
+  .about__info {
+    margin: 26px auto 0;
+    padding: 6px 0 0;
+    max-width: 284px;
+    display: block;
+  }
+
+  .about__info_container {
+    margin: 35px 0 0;
+    padding: 21px 0 0;
+  }
+
+  .about__info_title {
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: -0.7px;
+  }
+
+  .about__info_text {
+    margin: 16px 0 0;
+    font-size: 11px;
+    line-height: 16px;
+  }
+
+  .about__time {
+    max-width: 284px;
+    padding: 16px 0 0;
+  }
+
+  .about__backend {
+    padding: 0;
+    margin: 42px 0 0;
+    width: 43%;
+  }
+
+  .about__backend_title {
+    font-size: 11px;
+    line-height: 36px;
+
+  }
+  
+  .about__backend_text {
+    font-size: 11px;
+    padding: 0;
+    margin: 8px 0 0;
+  }
+
+  .about__frontend {
+    padding: 0;
+    margin: 42px 0 0;
+    width: 80%;
+  }
+
+  .about__frontend_title {
+    font-size: 11px;
+    line-height: 36px;
+  }
+  
+  .about__frontend_text {
+    font-size: 11px;
+    margin: 8px 0 0;
   }
 }

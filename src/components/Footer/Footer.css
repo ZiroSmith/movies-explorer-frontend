@@ -36,6 +36,7 @@
 .footer__info_date {
   padding: 0;
   margin: 0;
+  letter-spacing: -0.3px;
 }
 
 .footer__info_links {
@@ -49,6 +50,7 @@
   padding: 0;
   margin: 0;
   text-decoration: none;
+  letter-spacing: -0.5px;
 }
 
 .footer__info_link:hover {
@@ -63,5 +65,46 @@
 @media screen and (max-width: 1024px) {
   .footer__container {
     padding: 0 30px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .footer__container {
+    padding: 0 10px;
+    margin: 0;
+    max-width: 292px;
+  }
+
+  .footer__title {
+    padding: 4px 0 20px;
+    font-size: 12px;
+    line-height: 15px;
+    max-width: 292px;
+    letter-spacing: -0.2px;
+  }
+
+  .footer__info {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column-reverse;
+  }
+
+  .footer__info_links {
+    display: block;
+    margin-left: 4px;
+  }
+
+  .footer__info_link {
+    display: block;
+    font-size: 12px;
+    line-height: 15px;
+    margin: 11px 0 0;
+  }
+
+  .footer__info_date {
+    padding: 0;
+    margin: 30px 0 0 4px;
+    font-size: 12px;
+    line-height: 15px;
   }
 }
