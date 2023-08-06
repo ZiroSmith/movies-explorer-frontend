@@ -21,10 +21,10 @@ function Header() {
               <img className="header__logo" src={headerLogo} alt="Логотип" />
             </Link>
             <div className="header__navbar">
-              <Link to="/signup" className="header__link">
+              <Link to="/signup" className="header__signup">
                 Регистрация
               </Link>
-              <Link to="/signin" className="header__sign-in">
+              <Link to="/signin" className="header__signin">
                 Войти
               </Link>
             </div>

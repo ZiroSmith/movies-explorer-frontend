@@ -111,8 +111,28 @@
   cursor: pointer;
 }
 
-.header__sign-in {
+.header__signup {
   margin: 0;
+  padding: 0;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
+  text-decoration: none;
+}
+
+.header__signup:visited {
+  color: white;
+}
+
+.header__signup:hover {
+  opacity: 0.5;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.header__signin {
+  margin: 0 70px 0 0;
   padding: 0;
   width: 76px;
   height: 32px;
@@ -127,7 +147,7 @@
   line-height: 34px;
 }
 
-.header__sign-in:hover {
+.header__signin:hover {
   opacity: 0.5;
   transition: 0.3s;
   cursor: pointer;
@@ -239,9 +259,13 @@
     right: 0;
   }
 
-  .header__navbar {
+  .header__navbar_dark {
     gap: 10px;
     flex-direction: column;
+    margin: 0;
+  }
+
+  .header__signin{
     margin: 0;
   }
 
@@ -315,19 +339,51 @@
   }
 
   .header__navbar {
-    margin-right: 14px;
+    margin: 0;
     gap: 14px;
   }
 
   .header__link {
+    margin-top: 3px;
+    padding: 0 0 6px;
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .header__link_home {
+    display: block;
+    margin: 146px 0 0;
+  }
+
+  .header__signup {
     font-size: 10px;
     line-height: 16px;
   }
 
-  .header__sign-in {
+  .header__signin {
     width: 54px;
     height: 26px;
     font-size: 10px;
     line-height: 26px;
+    margin-right: 14px;
+  }
+
+  .header__link_container {
+    margin: 438px 122px 0;
+  }
+
+  .header__link_text {
+    font-size: 13px;
+    line-height: 12px;
+  }
+
+  .header__logo_container {
+    width: 26px;
+    height: 26px;
+  }
+  
+  .header__link_logo {
+    width: 31px;
+    height: 12px;
   }
 }
