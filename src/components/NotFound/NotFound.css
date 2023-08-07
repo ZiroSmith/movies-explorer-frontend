@@ -10,7 +10,7 @@
   font-weight: 400;
   font-size: 140px;
   line-height: 169px;
-  color: #FFF;
+  color: #fff;
 }
 
 .notFound__text {
@@ -20,7 +20,7 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;
-  color: #FFF;
+  color: #fff;
 }
 
 .notFound__link {
@@ -31,6 +31,32 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 17px;
-  color: #4285F4;
+  color: #4285f4;
   text-decoration: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .notFound__title {
+    margin: 408px auto 0;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .notFound__title {
+    margin: 330px auto 0;
+    font-size: 80px;
+    line-height: 97px;
+  }
+
+  .notFound__text {
+    margin-top: 10px;
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .notFound__link {
+    margin-top: 284px;
+    font-size: 12px;
+    line-height: 15px;
+  }
 }

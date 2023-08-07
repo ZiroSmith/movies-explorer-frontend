@@ -67,7 +67,7 @@
 }
 
 .moviesCard__btn:hover {
-  opacity: .5;
+  opacity: 0.5;
   transition: 0.3s;
 }
 
@@ -88,7 +88,7 @@
     max-width: 339px;
     min-height: 257px;
   }
-  
+
   .moviesCard__image {
     max-width: 339px;
     min-height: 190px;
@@ -100,7 +100,7 @@
     max-width: 300px;
     min-height: 235px;
   }
-  
+
   .moviesCard__image {
     max-width: 300px;
     min-height: 168px;

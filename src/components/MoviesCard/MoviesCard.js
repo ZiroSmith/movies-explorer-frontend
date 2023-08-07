@@ -17,7 +17,11 @@ function MoviesCard() {
     <section className="moviesCard">
       <div className="moviesCard__container">
         <div className="moviesCard__element">
-          <img className="moviesCard__image" src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT88QaYEi07DMDHJVqsqk0L1DxTdcIaveA1qw&usqp=CAU' alt='Храбрая сердцем' />
+          <img
+            className="moviesCard__image"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT88QaYEi07DMDHJVqsqk0L1DxTdcIaveA1qw&usqp=CAU"
+            alt="Храбрая сердцем"
+          />
           <div className="moviesCard__name">
             <h2 className="moviesCard__title">Храбрая сердцем</h2>
             <button

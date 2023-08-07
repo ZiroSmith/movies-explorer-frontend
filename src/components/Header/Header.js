@@ -39,40 +39,56 @@ function Header() {
             <Link to="/">
               <img className="header__logo" src={headerLogo} alt="Логотип" />
             </Link>
-            <button 
-              type="button" 
+            <button
+              type="button"
               onClick={handleBurgerClick}
-              className={burgerButton
-                ? "header__burger  header__burger_open"
-                : "header__burger"
+              className={
+                burgerButton
+                  ? "header__burger  header__burger_open"
+                  : "header__burger"
               }
-              >
+            >
               <span></span>
             </button>
-            <div className={burgerButton
-                ? "header__menu  header__menu_open"
-                : "header__menu"
-              }>
+            <div
+              className={
+                burgerButton
+                  ? "header__menu  header__menu_open"
+                  : "header__menu"
+              }
+            >
               <div className="header__navbar header__navbar_dark">
-                <Link to="/" className="header__link header__link_dark header__link_home">
-                    Главная
+                <Link
+                  to="/"
+                  className="header__link header__link_dark header__link_home"
+                >
+                  Главная
                 </Link>
-                <Link to="/movies" className={`${
+                <Link
+                  to="/movies"
+                  className={`${
                     location.pathname === "/movies"
                       ? "header__link header__link_dark header__link_active"
                       : "header__link header__link_dark"
-                  }`}>
+                  }`}
+                >
                   Фильмы
                 </Link>
-                <Link to="/saved-movies" className={`${
+                <Link
+                  to="/saved-movies"
+                  className={`${
                     location.pathname === "/saved-movies"
                       ? "header__link header__link_active"
                       : "header__link"
-                  }`}>
+                  }`}
+                >
                   Сохранённые фильмы
                 </Link>
               </div>
-              <Link to="/profile" className="header__link header__link_container">
+              <Link
+                to="/profile"
+                className="header__link header__link_container"
+              >
                 <p className="header__link_text">Аккаунт</p>
                 <div className="header__logo_container">
                   <img
@@ -91,7 +107,6 @@ function Header() {
 }
 
 export default Header;
-
 
 // import "./Header.css";
 // import React from "react";

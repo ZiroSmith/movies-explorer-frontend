@@ -7,7 +7,7 @@ function Login() {
   return (
     <section className="signin">
       <div className="signin__container">
-        <Link to="/" >
+        <Link to="/">
           <img className="signin__logo" src={headerLogo} alt="Логотип" />
         </Link>
         <p className="signin__welcome">Рады видеть!</p>
@@ -38,7 +38,7 @@ function Login() {
             </button>
           </div>
         </form>
-        <div className="signin__signin">
+        <div className="signin__clue">
           <p className="signin__text">Ещё не зарегистрированы?</p>
           <Link to="/signup" className="signin__login-link">
             Регистрация

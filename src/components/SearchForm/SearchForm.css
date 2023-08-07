@@ -54,15 +54,15 @@
 }
 
 .search__input_button:hover {
-  opacity: .5;
-  transition: .3s;
+  opacity: 0.5;
+  transition: 0.3s;
 }
 
 @media screen and (max-width: 1024px) {
   .search__container {
     max-width: 708px;
   }
-  
+
   .search__input_container {
     max-width: 708px;
   }
@@ -81,7 +81,7 @@
   .search__container {
     max-width: 292px;
   }
-  
+
   .search__input_container {
     max-width: 292px;
   }

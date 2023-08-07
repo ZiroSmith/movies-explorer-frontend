@@ -3,8 +3,8 @@ import "./SavedMovies.css";
 
 import SearchForm from "../SearchForm/SearchForm";
 import Preloader from "../Preloader/Preloader";
-import MoviesCardList from "../MoviesCardList/MoviesCardList";
-import { savedMoviesCardArray } from "../../utils/constans";
+import MoviesCardListSave from "../MoviesCardList/MoviesCardListSave";
+import { moviesCardArray } from "../../utils/constans";
 
 function SavedMovies() {
   return (
@@ -12,7 +12,7 @@ function SavedMovies() {
       <section>
         <SearchForm />
         <Preloader />
-        <MoviesCardList moviesCardArray={savedMoviesCardArray} />
+        <MoviesCardListSave moviesCardArray={moviesCardArray} />
       </section>
     </main>
   );

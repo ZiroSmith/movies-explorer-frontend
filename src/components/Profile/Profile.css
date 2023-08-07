@@ -84,8 +84,8 @@
 }
 
 .profile__button_edit:hover {
-  opacity: .5;
-  transition: .3s;
+  opacity: 0.5;
+  transition: 0.3s;
 }
 
 .profile__button_exit {
@@ -103,6 +103,38 @@
 }
 
 .profile__button_exit:hover {
-  opacity: .5;
-  transition: .3s;
+  opacity: 0.5;
+  transition: 0.3s;
+}
+
+@media screen and (max-width: 1024px) {
+  .profile__title {
+    margin: 236px 0 80px;
+  }
+
+  .profile__button_edit {
+    margin: 192px auto 0;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .profile__title {
+    margin: 70px 0 64px;
+  }
+
+  .form__label {
+    width: 260px;
+  }
+
+  .profile__button_edit {
+    margin: 362px auto 0;
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .profile__button_exit {
+    margin: 16px auto 0;
+    font-size: 12px;
+    line-height: 15px;
+  }
 }

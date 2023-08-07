@@ -54,8 +54,8 @@
 }
 
 .footer__info_link:hover {
-  opacity: .5;
-  transition: .3s;
+  opacity: 0.5;
+  transition: 0.3s;
 }
 
 .footer__info_link:visited {

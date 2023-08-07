@@ -82,12 +82,12 @@ input:checked + .filtercheckbox__slider:before {
   .filtercheckbox {
     padding: 30px 0 47px;
   }
-  
+
   .filtercheckbox__container {
     max-width: 768px;
     flex-direction: row-reverse;
   }
-  
+
   .filtercheckbox__switch {
     height: 18px;
   }
@@ -97,7 +97,7 @@ input:checked + .filtercheckbox__slider:before {
   .filtercheckbox {
     padding: 42px 0 47px;
   }
-  
+
   .filtercheckbox__container {
     max-width: 768px;
     flex-direction: row-reverse;

@@ -76,8 +76,8 @@
 }
 
 .aboutme__info_link:hover {
-  opacity: .5;
-  transition: .3s;
+  opacity: 0.5;
+  transition: 0.3s;
 }
 
 .aboutme__info_link:visited {
@@ -115,13 +115,13 @@
     font-size: 40px;
     line-height: 40px;
   }
-  
+
   .aboutme__info_subtitle {
     margin: 15px 0 0;
     font-size: 12px;
     line-height: 18px;
   }
-  
+
   .aboutme__info_text {
     margin: 20px 0 86px;
     font-size: 12px;
@@ -160,13 +160,13 @@
     line-height: 36px;
     letter-spacing: -1.3px;
   }
-  
+
   .aboutme__info_subtitle {
     margin: 20px 0 0;
     font-size: 11px;
     line-height: 16px;
   }
-  
+
   .aboutme__info_text {
     margin: 20px 0 40px;
     font-size: 11px;

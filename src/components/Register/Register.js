@@ -7,21 +7,21 @@ function Register() {
   return (
     <section className="register">
       <div className="register__container">
-        <Link to="/" >
+        <Link to="/">
           <img className="register__logo" src={headerLogo} alt="Логотип" />
         </Link>
         <p className="register__welcome">Добро пожаловать!</p>
         <form className="register__form">
           <label className="register__form_label">Имя</label>
           <input
-              id="name"
-              className="register__form__input"
-              name="name"
-              type="text"
-              value="Виталий"
-              placeholder="Имя"
-            />
-            <span className="register__form_error"></span>
+            id="name"
+            className="register__form__input"
+            name="name"
+            type="text"
+            value="Виталий"
+            placeholder="Имя"
+          />
+          <span className="register__form_error"></span>
           <label className="register__form_label">E-mail</label>
           <input
             id="email"
@@ -48,7 +48,7 @@ function Register() {
             </button>
           </div>
         </form>
-        <div className="register__signin">
+        <div className="register__clue">
           <p className="register__text">Уже зарегистрированы?</p>
           <Link to="/signin" className="register__login-link">
             Войти

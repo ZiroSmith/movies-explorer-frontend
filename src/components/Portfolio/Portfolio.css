@@ -64,8 +64,8 @@
 }
 
 .portfolio__link:hover {
-  opacity: .5;
-  transition: .3s;
+  opacity: 0.5;
+  transition: 0.3s;
 }
 
 .portfolio__link:visited {
@@ -76,7 +76,7 @@
   .portfolio {
     padding: 88px 0 0;
   }
-  
+
   .portfolio__container {
     max-width: 668px;
   }
@@ -99,7 +99,7 @@
   .portfolio {
     padding: 68px 0 0;
   }
-  
+
   .portfolio__container {
     max-width: 292px;
   }
