@@ -67,6 +67,11 @@
   padding: 15px;
 }
 
+.register__form__input:focus {
+  outline: none;
+  outline: 1px solid #34c6f3;
+}
+
 .register__form_error {
   color: #ee3465;
   font-style: normal;

@@ -20,6 +20,7 @@ function Login() {
             type="email"
             value="pochta@yandex.ru"
             placeholder="Email"
+            required
           />
           <span className="signin__form_error"></span>
           <label className="signin__form_label">Пароль</label>
@@ -30,6 +31,7 @@ function Login() {
             type="password"
             value="password"
             placeholder="Пароль"
+            required
           />
           <span className="signin__form_error">Что-то пошло не так...</span>
           <div className="signin__button">

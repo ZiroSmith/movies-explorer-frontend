@@ -20,6 +20,7 @@ function Register() {
             type="text"
             value="Виталий"
             placeholder="Имя"
+            required
           />
           <span className="register__form_error"></span>
           <label className="register__form_label">E-mail</label>
@@ -30,6 +31,7 @@ function Register() {
             type="email"
             value="pochta@yandex.ru"
             placeholder="Email"
+            required
           />
           <span className="register__form_error"></span>
           <label className="register__form_label">Пароль</label>
@@ -40,6 +42,7 @@ function Register() {
             type="password"
             value="passwordpasswo"
             placeholder="Пароль"
+            required
           />
           <span className="register__form_error">Что-то пошло не так...</span>
           <div className="register__button">
