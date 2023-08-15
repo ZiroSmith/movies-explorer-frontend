@@ -2,6 +2,7 @@
   margin: 0;
   padding: 32px 0 47px;
   color: white;
+  display: flex;
 }
 
 .filtercheckbox__container {
@@ -78,14 +79,19 @@ input:checked + .switch__slider:before {
   border-radius: 50%;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 850px) {
+  .filtercheckbox__container {
+    flex-direction: row-reverse;
+  }
+}
+
+@media screen and (max-width: 768px) {
   .filtercheckbox {
     padding: 30px 0 47px;
   }
 
   .filtercheckbox__container {
-    max-width: 768px;
-    flex-direction: row-reverse;
+    max-width: 708px;
   }
 
   .switch {
@@ -104,6 +110,8 @@ input:checked + .switch__slider:before {
     transition: 0.4s;
   }
 }
+
+
 
 @media screen and (max-width: 425px) {
   .filtercheckbox {

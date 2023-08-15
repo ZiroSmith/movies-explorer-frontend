@@ -4,21 +4,21 @@ import MoviesCard from "../MoviesCard/MoviesCard";
 
 function MoviesCardListSave() {
   return (
-    <section className="moviesCardList">
+    <section className="movies">
       {/* Временные заглушки в виде классов для сверки 
       с макетомпо Pixel Perfect */}
-      <ul className="moviesCardList__container">
-        <li className="moviesCardList__element">
+      <ul className="movies__container movies__container_save">
+        <li className="movies__element">
           <MoviesCard />
         </li>
-        <li className="moviesCardList__element">
+        <li className="movies__element">
           <MoviesCard />
         </li>
-        <li className="moviesCardList__element width__save320">
+        <li className="movies__element width__save320">
           <MoviesCard />
         </li>
       </ul>
-      <button className="moviesCardList__button moviesCardList__button-save">
+      <button className="movies__button movies__button-save">
         Ещё
       </button>
     </section>

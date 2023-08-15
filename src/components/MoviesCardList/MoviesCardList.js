@@ -4,60 +4,60 @@ import MoviesCard from "../MoviesCard/MoviesCard";
 
 function MoviesCardList() {
   return (
-    <section className="moviesCardList">
+    <section className="movies">
       {/* Временные заглушки в виде классов для сверки 
       с макетомпо Pixel Perfect */}
-      <ul className="moviesCardList__container">
-        <li className="moviesCardList__element">
+      <ul className="movies__container">
+        <li className="movies__element">
           <MoviesCard />
         </li>
-        <li className="moviesCardList__element">
+        <li className="movies__element">
           <MoviesCard />
         </li>
-        <li className="moviesCardList__element">
+        <li className="movies__element">
           <MoviesCard />
         </li>
-        <li className="moviesCardList__element">
+        <li className="movies__element">
           <MoviesCard />
         </li>
-        <li className="moviesCardList__element">
+        <li className="movies__element">
           <MoviesCard />
         </li>
-        <li className="moviesCardList__element width_320">
+        <li className="movies__element width_320">
           <MoviesCard />
         </li>
-        <li className="moviesCardList__element width_320">
+        <li className="movies__element width_320">
           <MoviesCard />
         </li>
-        <li className="moviesCardList__element width_320">
+        <li className="movies__element width_320">
           <MoviesCard />
         </li>
-        <li className="moviesCardList__element width_768">
+        <li className="movies__element width_768">
           <MoviesCard />
         </li>
-        <li className="moviesCardList__element width_768">
+        <li className="movies__element width_768">
           <MoviesCard />
         </li>
-        <li className="moviesCardList__element width_768">
+        <li className="movies__element width_768">
           <MoviesCard />
         </li>
-        <li className="moviesCardList__element width_768">
+        <li className="movies__element width_768">
           <MoviesCard />
         </li>
-        <li className="moviesCardList__element width_768">
+        <li className="movies__element width_768">
           <MoviesCard />
         </li>
-        <li className="moviesCardList__element width_768">
+        <li className="movies__element width_768">
           <MoviesCard />
         </li>
-        <li className="moviesCardList__element width_768">
+        <li className="movies__element width_768">
           <MoviesCard />
         </li>
-        <li className="moviesCardList__element width_768">
+        <li className="movies__element width_768">
           <MoviesCard />
         </li>
       </ul>
-      <button className="moviesCardList__button">Ещё</button>
+      <button className="movies__button">Ещё</button>
     </section>
   );
 }

@@ -1,19 +1,20 @@
 .footer {
   background-color: #202020;
-  width: 100%;
+  max-width: 1280px;
   color: white;
   flex-shrink: 0;
+  margin: 0 auto;
 }
 
 .footer__container {
   padding: 0;
   margin: 0 auto;
-  max-width: 1140px;
+  max-width: calc(100% - 140px);
 }
 
 .footer__title {
-  padding: 4px 0 20px;
-  margin: 0;
+  padding: 8px 0 20px;
+  margin: 0 auto;
   color: #8b8b8b;
   font-style: normal;
   font-size: 13px;
@@ -63,21 +64,30 @@
   color: white;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 768px) {
   .footer__container {
-    padding: 0 30px;
+    max-width: calc(100% - 60px);
+  }
+
+  .footer__title {
+    padding: 4px 0 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .footer__container {
+    max-width: calc(100% - 20px);
   }
 }
 
 @media screen and (max-width: 425px) {
   .footer__container {
     padding: 0 10px;
-    margin: 0;
-    max-width: 292px;
+    margin: 0 auto;
   }
 
   .footer__title {
-    padding: 4px 0 20px;
+    padding: 8px 0 20px;
     font-size: 12px;
     line-height: 15px;
     max-width: 292px;
