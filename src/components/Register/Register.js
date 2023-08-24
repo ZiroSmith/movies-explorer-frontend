@@ -1,9 +1,17 @@
 import React from "react";
 import "./Register.css";
 import { Link } from "react-router-dom";
+import { useValidation } from "../../hooks/useFormAndValidation";
 import headerLogo from "../../images/logo.svg";
 
-function Register() {
+const Register = (props) => {
+  const { values, isValid, handleChange, errors } = useValidation();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    props.handleRegister(values.name, values.email, values.password);
+  };
+
   return (
     <section className="register">
       <div className="register__container">
@@ -11,42 +19,58 @@ function Register() {
           <img className="register__logo" src={headerLogo} alt="Логотип" />
         </Link>
         <p className="register__welcome">Добро пожаловать!</p>
-        <form className="register__form">
+        <form 
+          onSubmit={handleSubmit}
+          className="register__form">
           <label className="register__form_label">Имя</label>
           <input
             id="name"
             className="register__form__input"
             name="name"
+            value={values.name || ""}
+            onChange={handleChange}
             type="text"
-            value="Виталий"
             placeholder="Имя"
+            minLength={2}
+            maxLength={30}
             required
           />
-          <span className="register__form_error"></span>
+          <span className="register__form_error">{errors.name}</span>
           <label className="register__form_label">E-mail</label>
           <input
             id="email"
             className="register__form__input"
             name="email"
+            value={values.email || ""}
+            onChange={handleChange}
             type="email"
-            value="pochta@yandex.ru"
             placeholder="Email"
             required
           />
-          <span className="register__form_error"></span>
+          <span className="register__form_error">{errors.email}</span>
           <label className="register__form_label">Пароль</label>
           <input
             id="password"
             className="register__form__input"
             name="password"
+            value={values.password || ""}
+            onChange={handleChange}
             type="password"
-            value="passwordpasswo"
             placeholder="Пароль"
+            minLength={2}
+            maxLength={30}
             required
           />
-          <span className="register__form_error">Что-то пошло не так...</span>
-          <div className="register__button">
-            <button type="submit" className="register__link">
+          <span className="register__form_error">{errors.password}</span>
+          <div className={`${
+                isValid
+                  ? "register__button"
+                  : "register__button register__button_disabled"
+              }`}>
+            <button 
+              type="submit" 
+              className="register__link"
+              onSubmit={handleSubmit}>
               Зарегистрироваться
             </button>
           </div>

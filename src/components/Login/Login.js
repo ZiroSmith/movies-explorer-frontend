@@ -1,9 +1,20 @@
 import React from "react";
 import "./Login.css";
 import { Link } from "react-router-dom";
+import { useValidation } from "../../hooks/useFormAndValidation";
 import headerLogo from "../../images/logo.svg";
 
-function Login() {
+const Login = (props) => {
+  const { values, isValid, handleChange, errors } = useValidation();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!values.email || !values.password) {
+      return;
+    }
+    props.handleLogin(values.email, values.password);
+  };
+
   return (
     <section className="signin">
       <div className="signin__container">
@@ -11,30 +22,38 @@ function Login() {
           <img className="signin__logo" src={headerLogo} alt="Логотип" />
         </Link>
         <p className="signin__welcome">Рады видеть!</p>
-        <form className="signin__form">
+        <form className="signin__form" onSubmit={handleSubmit}>
           <label className="signin__form_label">E-mail</label>
           <input
             id="email"
             className="signin__form__input"
             name="email"
             type="email"
-            value="pochta@yandex.ru"
+            value={values.email || ""}
+            onChange={handleChange}
             placeholder="Email"
             required
           />
-          <span className="signin__form_error"></span>
+          <span className="signin__form_error">{errors.email}</span>
           <label className="signin__form_label">Пароль</label>
           <input
             id="password"
             className="signin__form__input"
             name="password"
             type="password"
-            value="password"
+            value={values.password || ""}
+            onChange={handleChange}
             placeholder="Пароль"
+            minLength={2}
+            maxLength={30}
             required
           />
-          <span className="signin__form_error">Что-то пошло не так...</span>
-          <div className="signin__button">
+          <span className="signin__form_error">{errors.password}</span>
+          <div className={`${
+                isValid
+                  ? "signin__button"
+                  : "signin__button signin__button_disabled"
+              }`}>
             <button type="submit" className="signin__link">
               Войти
             </button>
