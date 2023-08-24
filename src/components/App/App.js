@@ -62,6 +62,7 @@ function App() {
     mainApi
       .editUserInfo(name, email)
       .then((res) => {
+        checkToken();
         setCurrentUser(res);
       })
       .catch((err) => {

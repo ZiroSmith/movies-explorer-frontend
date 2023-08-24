@@ -28,8 +28,8 @@
 
 .form__label {
   width: 410px;
-  padding: 0 0 16px;
-  margin: 18px auto 0;
+  padding: 18px 0 7px;
+  margin: 0 auto;
   font-style: normal;
   font-size: 11px;
   font-weight: 400;
@@ -38,10 +38,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #424242;
+  border-top: 1px solid #424242;
 }
 
-.form__label:last-child {
+.form__label:first-child {
   border: 0;
 }
 
@@ -57,6 +57,17 @@
   outline: none;
   border: none;
   text-align: right;
+}
+
+.form__input_error {
+  color: #ee3465;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12px;
+  text-align: left;
+  padding: 10px 0 0;
+  margin: 0 auto;
 }
 
 .form__input_name {
@@ -95,7 +106,7 @@
 
 .profile__button_edit {
   padding: 0;
-  margin: 204px auto 0;
+  margin: 206px auto 0;
   font-style: normal;
   font-size: 13px;
   font-weight: 400;

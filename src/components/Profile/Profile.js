@@ -4,7 +4,7 @@ import { useValidation } from "../../hooks/useFormAndValidation";
 import { CurrentUserContext } from "../../contexts/CurrentUserContext";
 
 function Profile(props) {
-  const { values, isValid, handleChange, setValues } = useValidation();
+  const { values, isValid, handleChange, setValues, errors } = useValidation();
   const currentUser = React.useContext(CurrentUserContext);
   const [isSwitchButton, setSwitchButton] = React.useState(true);
 
@@ -29,8 +29,7 @@ function Profile(props) {
       <form className="profile__container" onSubmit={handleSubmit}>
         <h2 className="profile__title">Привет, {currentUser.name}!</h2>
         <fieldset className="profile__form_fieldset">
-          <label className="form__label">
-            Имя
+          <label className="form__label">Имя
             <input
               className="form__input form__input_name"
               value={values.name || ""}
@@ -43,6 +42,8 @@ function Profile(props) {
               required
             />
           </label>
+          <span className="form__input_error">{errors.name}</span>
+          
 
           <label className="form__label">
             E-mail
@@ -58,6 +59,7 @@ function Profile(props) {
               required
             />
           </label>
+          <span className="form__input_error">{errors.email}</span>
         </fieldset>
         <button
           onClick={handleEdit}
