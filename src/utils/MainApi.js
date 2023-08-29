@@ -82,7 +82,7 @@ export class Api {
 }
 
 const mainApi = new Api({
-  address: "http://localhost:3000",
+  address: "https://api.zeromovies.nomoreparties.sbs",
 });
 
 export default mainApi;

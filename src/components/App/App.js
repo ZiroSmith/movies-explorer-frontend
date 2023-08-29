@@ -51,11 +51,11 @@ function App() {
   const handleRegister = (name, email, password) => {
     return Auth.register(name, email, password)
       .then(() => {
-        console.log("Регистрация заебись");
+        console.log("Успешная регистрация");
         navigate("/signin");
       })
       .catch(() => {
-        console.log("Регистрация хуйня");
+        console.log("Регистрация не удалась");
       });
   };
 
