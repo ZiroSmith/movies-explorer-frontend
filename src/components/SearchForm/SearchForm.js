@@ -16,34 +16,29 @@ function SearchForm({
   isSaveCards,
 }) {
   const location = useLocation();
+  const MovieLocation = location.pathname === "/movies";
+  const [isSearchFail, setIsSearchFail] = React.useState(false);
+  const [isSearchError, setIsSearchError] = React.useState("");
+
   const searchRef = React.useRef("");
   const searchSaveRef = React.useRef("");
   const toggleRef = React.useRef(false);
   const toggleSaveCardRef = React.useRef(false);
-  const [isSearchFail, setIsSearchFail] = React.useState(false);
-  const [isSearchError, setIsSearchError] = React.useState("");
-  const moviesPath = location.pathname === "/movies";
 
-  const onBlur = () => {
-    setIsSearchFail(true);
-  };
-
-  const handleMainSearch = (e) => {
+  const handleRequestSearch = (e) => {
     const value = e.target.value;
     setSearch(value);
     localStorage.setItem("RequestText", value);
     !value ? setIsSearchError("Введите ключевое слово") : setIsSearchError("");
   };
 
-  const handleSavedSearch = (e) => {
+  const handleRequestSavedSearch = (e) => {
     setIsSearchInSaveMovies(e.target.value);
-    !e.target.value
-      ? setIsSearchError("Введите ключевое слово")
-      : setIsSearchError("");
+    !e.target.value ? setIsSearchError("Введите ключевое слово") : setIsSearchError("");
   };
 
-  const searchHandler = (e) => {
-    moviesPath ? handleMainSearch(e) : handleSavedSearch(e);
+  const searchRequestHandler = (e) => {
+    MovieLocation ? handleRequestSearch(e) : handleRequestSavedSearch(e);
   };
 
   const searchMain = () => {
@@ -65,12 +60,16 @@ function SearchForm({
   };
 
   const handleToggle = () => {
-    moviesPath ? handleMainToggle() : handleSavedToggle();
+    MovieLocation ? handleMainToggle() : handleSavedToggle();
   };
 
   const submitHandler = (e) => {
     e.preventDefault();
-    moviesPath ? searchMain() : searchSaved();
+    MovieLocation ? searchMain() : searchSaved();
+  };
+
+  const onBlur = () => {
+    setIsSearchFail(true);
   };
 
   return (
@@ -85,11 +84,11 @@ function SearchForm({
             name="search"
             id="search"
             type="text"
-            placeholder="Фильм"
-            value={moviesPath ? search : IsSearchInSaveMovies}
-            onChange={(e) => searchHandler(e)}
+            value={MovieLocation ? search : IsSearchInSaveMovies}
+            onChange={(e) => searchRequestHandler(e)}
             onBlur={onBlur}
-            ref={moviesPath ? searchRef : searchSaveRef}
+            ref={MovieLocation ? searchRef : searchSaveRef}
+            placeholder="Фильм"
           />
           <button className="search__input_button"></button>
         </form>
@@ -101,9 +100,9 @@ function SearchForm({
             <label className="switch">
               <input
                 type="checkbox"
-                checked={moviesPath ? isToggled : isToggledSaveMovie}
+                checked={MovieLocation ? isToggled : isToggledSaveMovie}
                 onChange={handleToggle}
-                ref={moviesPath ? toggleRef : toggleSaveCardRef}
+                ref={MovieLocation ? toggleRef : toggleSaveCardRef}
               />
               <span className="switch__slider switch__round"></span>
             </label>

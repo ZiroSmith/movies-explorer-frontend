@@ -4,13 +4,12 @@ import { useLocation } from "react-router-dom";
 
 function MoviesCard({ card, onClickMovie, isLikedCard, handleDeleteSaveMovie }) {
   const location = useLocation();
-  const isLiked = isLikedCard(card);
-  
+  const isSaved = isLikedCard(card);
   const hours = Math.floor(card.duration / 60);
   const minutes = card.duration - hours * 60;
 
   const movieLikeBtnClassName = `moviesCard__btn ${
-    isLiked && "moviesCard__btn_active"
+    isSaved && "moviesCard__btn_active"
   }`;
 
   function saveMovie() {
@@ -47,15 +46,13 @@ function MoviesCard({ card, onClickMovie, isLikedCard, handleDeleteSaveMovie }) 
               <button
                 className={movieLikeBtnClassName}
                 type="button"
-                aria-label="В избранное"
-                onClick={!isLiked ? saveMovie : deleteMovie}
+                onClick={!isSaved ? saveMovie : deleteMovie}
               />
             )}
             {location.pathname === "/saved-movies" && (
               <button
                 className="moviesCard__btn moviesCard__btn_delete"
                 type="button"
-                aria-label="Удалить фильм"
                 onClick={deleteMovie}
               />
             )}

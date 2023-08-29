@@ -280,12 +280,12 @@ function App() {
                 isLoading={isLoading}
                 loadMoreMovie={loadMoreMovie}
                 isArrElement={isArrElement}
-                isToggled={isToggled}
-                setIsToggled={setIsToggled}
                 handleSearch={handleFirstSearch}
                 handleAddSaveMovie={handleAddSaveMovie}
                 isLikedCard={isLikedCard}
                 handleDeleteSaveMovie={handleDeleteSaveMovie}
+                isToggled={isToggled}
+                setIsToggled={setIsToggled}
               />
             }
           />
@@ -301,10 +301,10 @@ function App() {
                 setIsSaveCards={setIsSaveCards}
                 handleDeleteSaveMovie={handleDeleteSaveMovie}
                 handleSearchInSavedMovie={handleSearchInSavedMovie}
-                isToggledSaveMovie={isToggledSaveMovie}
-                setIsToggledSaveMovie={setIsToggledSaveMovie}
                 IsSearchInSaveMovies={IsSearchInSaveMovies}
                 setIsSearchInSaveMovies={setIsSearchInSaveMovies}
+                isToggledSaveMovie={isToggledSaveMovie}
+                setIsToggledSaveMovie={setIsToggledSaveMovie}
               />
             }
           />

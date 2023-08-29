@@ -5,11 +5,11 @@ import MoviesCard from "../MoviesCard/MoviesCard";
 
 function MoviesCardList({
   cards,
+  isSaveCards,
+  setIsSaveCards,
   isErrorMovie,
   handleAddSaveMovie,
   isLikedCard,
-  isSaveCards,
-  setIsSaveCards,
   handleDeleteSaveMovie,
 }) {
   const location = useLocation();

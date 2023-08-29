@@ -19,19 +19,19 @@ function SavedMovies({
     <main className="savedMovies">
       <section>
         <SearchForm
-          isToggledSaveMovie={isToggledSaveMovie}
-          setIsToggledSaveMovie={setIsToggledSaveMovie}
-          handleSearchInSavedMovie={handleSearchInSavedMovie}
-          IsSearchInSaveMovies={IsSearchInSaveMovies}
           setIsSearchInSaveMovies={setIsSearchInSaveMovies}
           isSaveCards={isSaveCards}
+          isToggledSaveMovie={isToggledSaveMovie}
+          handleSearchInSavedMovie={handleSearchInSavedMovie}
+          IsSearchInSaveMovies={IsSearchInSaveMovies}
+          setIsToggledSaveMovie={setIsToggledSaveMovie}
         />
         <MoviesCardList
-          handleAddSaveMovie={handleAddSaveMovie}
           isSaveCards={isSaveCards}
-          handleDeleteSaveMovie={handleDeleteSaveMovie}
           setIsSaveCards={setIsSaveCards}
           isLikedCard={isLikedCard}
+          handleDeleteSaveMovie={handleDeleteSaveMovie}
+          handleAddSaveMovie={handleAddSaveMovie}
         />
       </section>
     </main>

@@ -7,7 +7,6 @@ function ButtonAddMovie({ loadMoreMovie, cards, isArrElement }) {
         <button
           className="movies__button"
           type="button"
-          aria-label="Больше карточек"
           onClick={loadMoreMovie}
         >
           Ещё

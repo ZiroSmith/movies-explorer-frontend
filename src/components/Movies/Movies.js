@@ -9,16 +9,16 @@ function Movies({
   cards,
   search,
   setSearch,
-  isErrorMovie,
-  isLoading,
-  loadMoreMovie,
-  isArrElement,
   isToggled,
   setIsToggled,
   handleSearch,
+  isLoading,
+  loadMoreMovie,
+  isArrElement,
   handleAddSaveMovie,
   isLikedCard,
   handleDeleteSaveMovie,
+  isErrorMovie,
 }) {
   return (
     <main className="movies">
@@ -26,9 +26,9 @@ function Movies({
         <SearchForm
           search={search}
           setSearch={setSearch}
+          handleSearch={handleSearch}
           isToggled={isToggled}
           setIsToggled={setIsToggled}
-          handleSearch={handleSearch}
         />
         {isLoading ? (
           <Preloader />
@@ -36,14 +36,14 @@ function Movies({
           <>
             <MoviesCardList
               cards={cards}
-              isErrorMovie={isErrorMovie}
               handleAddSaveMovie={handleAddSaveMovie}
               isLikedCard={isLikedCard}
               handleDeleteSaveMovie={handleDeleteSaveMovie}
+              isErrorMovie={isErrorMovie}
             />
             <ButtonAddMovie
-              loadMoreMovie={loadMoreMovie}
               cards={cards}
+              loadMoreMovie={loadMoreMovie}
               isArrElement={isArrElement}
             />
           </>
