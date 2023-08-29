@@ -5,9 +5,9 @@
 # Ссылки на проект
 IP 158.160.118.87
 
-Frontend zeromovies.nomoredomainsicu.ru
+Frontend: https://zeromovies.nomoredomainsicu.ru
 
-Backend api.zeromovies.nomoreparties.sbs
+Backend: https://api.zeromovies.nomoreparties.sbs
 
 ## Pull request
 https://github.com/ZiroSmith/movies-explorer-frontend/pull/2
