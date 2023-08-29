@@ -1,16 +1,38 @@
 import React from "react";
 import "./SavedMovies.css";
-
 import SearchForm from "../SearchForm/SearchForm";
-import MoviesCardListSave from "../MoviesCardList/MoviesCardListSave";
-import { moviesCardArray } from "../../utils/constans";
+import MoviesCardList from "../MoviesCardList/MoviesCardList";
 
-function SavedMovies() {
+function SavedMovies({
+  handleAddSaveMovie,
+  isSaveCards,
+  setIsSaveCards,
+  handleDeleteSaveMovie,
+  isLikedCard,
+  handleSearchInSavedMovie,
+  isToggledSaveMovie,
+  setIsToggledSaveMovie,
+  IsSearchInSaveMovies,
+  setIsSearchInSaveMovies,
+}) {
   return (
     <main className="savedMovies">
       <section>
-        <SearchForm />
-        <MoviesCardListSave moviesCardArray={moviesCardArray} />
+        <SearchForm
+          isToggledSaveMovie={isToggledSaveMovie}
+          setIsToggledSaveMovie={setIsToggledSaveMovie}
+          handleSearchInSavedMovie={handleSearchInSavedMovie}
+          IsSearchInSaveMovies={IsSearchInSaveMovies}
+          setIsSearchInSaveMovies={setIsSearchInSaveMovies}
+          isSaveCards={isSaveCards}
+        />
+        <MoviesCardList
+          handleAddSaveMovie={handleAddSaveMovie}
+          isSaveCards={isSaveCards}
+          handleDeleteSaveMovie={handleDeleteSaveMovie}
+          setIsSaveCards={setIsSaveCards}
+          isLikedCard={isLikedCard}
+        />
       </section>
     </main>
   );

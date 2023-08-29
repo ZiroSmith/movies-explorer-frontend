@@ -21,8 +21,8 @@
 .moviesCard__image {
   margin: 0;
   padding: 0;
-  max-width: 270px;
-  min-height: 151px;
+  width: 270px;
+  height: 151px;
 }
 
 .moviesCard__name {
@@ -90,8 +90,8 @@
   }
 
   .moviesCard__image {
-    max-width: 339px;
-    min-height: 190px;
+    width: 339px;
+    height: 190px;
   }
 }
 
@@ -102,7 +102,7 @@
   }
 
   .moviesCard__image {
-    max-width: 300px;
-    min-height: 168px;
+    width: 300px;
+    height: 168px;
   }
 }
