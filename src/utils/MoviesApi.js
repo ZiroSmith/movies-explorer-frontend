@@ -18,11 +18,9 @@ export class Api {
 
   //Метод для запроса массива всех карточек стороннего Api
   getArrayCards() {
-    const token = localStorage.getItem("token");
     return this._request(this._address, {
       method: "GET",
       headers: {
-        authorization: `Bearer ${token}`,
         "Content-Type": "application/json",
       },
       body: JSON.stringify(),
