@@ -9,7 +9,7 @@
 }
 
 .header__container {
-  background-color: #073042;
+  background-color: inherit;
   max-width: 1280px;
   width: 100%;
   height: 74px;
@@ -19,7 +19,7 @@
 }
 
 .header__container_dark {
-  background-color: #202020;
+  background-color: inherit;
   max-width: 1280px;
   width: 100%;
   height: 74px;

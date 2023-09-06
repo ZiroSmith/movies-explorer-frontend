@@ -1,6 +1,6 @@
 import "./Footer.css";
 import React from "react";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 function Footer() {
   const location = useLocation();
@@ -18,20 +18,22 @@ function Footer() {
             <div className="footer__info">
               <p className="footer__info_date">&#169;2023</p>
               <div className="footer__info_links">
-                <Link
+                <a
                   className="footer__info_link"
-                  to={"https://practicum.yandex.ru/"}
+                  href="https://practicum.yandex.ru/"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   Яндекс.Практикум
-                </Link>
-                <Link
+                </a>
+                <a
                   className="footer__info_link"
-                  to={"https://github.com/ZiroSmith"}
+                  href="https://github.com/ZiroSmith"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   Github
-                </Link>
+                </a>
               </div>
             </div>
           </div>

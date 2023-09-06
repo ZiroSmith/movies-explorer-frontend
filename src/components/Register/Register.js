@@ -19,9 +19,7 @@ const Register = (props) => {
           <img className="register__logo" src={headerLogo} alt="Логотип" />
         </Link>
         <p className="register__welcome">Добро пожаловать!</p>
-        <form 
-          onSubmit={handleSubmit}
-          className="register__form">
+        <form onSubmit={handleSubmit} className="register__form">
           <label className="register__form_label">Имя</label>
           <input
             id="name"
@@ -44,6 +42,7 @@ const Register = (props) => {
             value={values.email || ""}
             onChange={handleChange}
             type="email"
+            pattern="[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z0-9]+"
             placeholder="Email"
             required
           />
@@ -62,15 +61,18 @@ const Register = (props) => {
             required
           />
           <span className="register__form_error">{errors.password}</span>
-          <div className={`${
-                isValid
-                  ? "register__button"
-                  : "register__button register__button_disabled"
-              }`}>
-            <button 
-              type="submit" 
+          <div
+            className={`${
+              isValid
+                ? "register__button"
+                : "register__button register__button_disabled"
+            }`}
+          >
+            <button
+              type="submit"
               className="register__link"
-              onSubmit={handleSubmit}>
+              onSubmit={handleSubmit}
+            >
               Зарегистрироваться
             </button>
           </div>
@@ -84,6 +86,6 @@ const Register = (props) => {
       </div>
     </section>
   );
-}
+};
 
 export default Register;

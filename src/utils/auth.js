@@ -32,8 +32,8 @@ export const authorize = (email, password) => {
   });
 };
 
-export const checkToken = () => {
-  const token = localStorage.getItem('token')
+export const tokenCheck = () => {
+  const token = localStorage.getItem("token");
   return request(`users/me`, {
     method: "GET",
     headers: {

@@ -7,6 +7,9 @@ function Profile(props) {
   const { values, isValid, handleChange, setValues, errors } = useValidation();
   const currentUser = React.useContext(CurrentUserContext);
   const [isSwitchButton, setSwitchButton] = React.useState(true);
+  const [isEdit, setIsEdit] = React.useState(false);
+  const [isUpdate, setIsUpdate] = React.useState(false);
+  const [successMessage, setSuccessMessage] = React.useState("");
 
   React.useEffect(() => {
     setValues({
@@ -15,13 +18,23 @@ function Profile(props) {
     });
   }, [setValues, currentUser]);
 
-  function handleEdit() {
+  function handleEdit(e) {
+    e.preventDefault();
+    setSwitchButton(!isSwitchButton);
+    setIsEdit(true);
+  }
+
+  function handleSave() {
     setSwitchButton(!isSwitchButton);
   }
 
   function handleSubmit(e) {
-    e.preventDefault(); 
+    e.preventDefault();
     props.handleEditProfile(values.name, values.email);
+    setIsUpdate(true);
+    setSuccessMessage("Данные успешно обновлены");
+    setTimeout(() => setSuccessMessage(""), 2000);
+    setIsEdit(false);
   }
 
   return (
@@ -29,7 +42,8 @@ function Profile(props) {
       <form className="profile__container" onSubmit={handleSubmit}>
         <h2 className="profile__title">Привет, {currentUser.name}!</h2>
         <fieldset className="profile__form_fieldset">
-          <label className="form__label">Имя
+          <label className="form__label">
+            Имя
             <input
               className="form__input form__input_name"
               value={values.name || ""}
@@ -43,7 +57,6 @@ function Profile(props) {
             />
           </label>
           <span className="form__input_error">{errors.name}</span>
-          
 
           <label className="form__label">
             E-mail
@@ -56,50 +69,60 @@ function Profile(props) {
               name="email"
               minLength={2}
               maxLength={30}
+              pattern="[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z0-9]+"
               required
             />
           </label>
-          <span className="form__input_error">{errors.email}</span>
+          {isUpdate ? (
+            <span className="form__input__success">{successMessage}</span>
+          ) : (
+            <span className="form__input_error">{errors.email}</span>
+          )}
         </fieldset>
-        <button
-          onClick={handleEdit}
-          className={`${
-            isSwitchButton
-              ? "profile__button_edit"
-              : "profile__button_edit profile__button_hide"
-          }`}
-        >
-          Редактировать
-        </button>
-        <button
-          onClick={props.signOut}
-          to="/"
-          className={`${
-            isSwitchButton
-              ? "profile__button_exit"
-              : "profile__button_exit profile__button_hide"
-          }`}
-        >
-          Выйти из аккаунта
-        </button>
-        <button
-          onClick={handleEdit}
-          type="submit"
-          className={`${
-            !isValid ||
-            (values.name === currentUser.name &&
-              values.email === currentUser.email)
-              ? "profile__button_save profile__button_hide"
-              : "profile__button_save"
-          }`}
-          disabled={
-            !isValid ||
-            (values.name === currentUser.name &&
-              values.email === currentUser.email)
-          }
-        >
-          Сохранить
-        </button>
+        {isEdit ? (
+          <button
+            onClick={handleSave}
+            type="submit"
+            className={`${
+              !isValid ||
+              values.name === currentUser.name ||
+              values.email === currentUser.email
+                ? "profile__button_save profile__button_hide"
+                : "profile__button_save"
+            }`}
+            disabled={
+              !isValid ||
+              (values.name === currentUser.name &&
+                values.email === currentUser.email)
+            }
+          >
+            Сохранить
+          </button>
+        ) : (
+          <>
+            <button
+              onClick={handleEdit}
+              className={`${
+                isSwitchButton
+                  ? "profile__button_edit"
+                  : "profile__button_edit profile__button_hide"
+              }`}
+            >
+              Редактировать
+            </button>
+            <button
+              onClick={props.signOut}
+              to="/"
+              className={`${
+                isSwitchButton
+                  ? "profile__button_exit"
+                  : "profile__button_exit profile__button_hide"
+              }`}
+            >
+              Выйти из аккаунта
+            </button>
+          </>
+        )}
       </form>
     </section>
   );

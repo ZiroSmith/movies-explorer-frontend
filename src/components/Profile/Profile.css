@@ -59,6 +59,17 @@
   text-align: right;
 }
 
+.form__input__success {
+  color: green;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12px;
+  text-align: left;
+  padding: 10px 0 0;
+  margin: 0 auto;
+}
+
 .form__input_error {
   color: #ee3465;
   font-style: normal;

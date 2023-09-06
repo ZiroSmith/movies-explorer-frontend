@@ -52,7 +52,7 @@ function App() {
     return Auth.register(name, email, password)
       .then(() => {
         console.log("Успешная регистрация");
-        navigate("/signin");
+        handleLogin(email, password);
       })
       .catch(() => {
         console.log("Регистрация не удалась");
@@ -72,9 +72,8 @@ function App() {
   function handleEditProfile(name, email) {
     mainApi
       .editUserInfo(name, email)
-      .then((res) => {
+      .then(() => {
         checkToken();
-        setCurrentUser(res);
       })
       .catch((err) => {
         console.log(err);
@@ -85,12 +84,11 @@ function App() {
   const checkToken = () => {
     const token = localStorage.getItem("token");
     if (token) {
-      Auth.checkToken(token)
+      Auth.tokenCheck(token)
         .then((res) => {
           if (res) {
             setCurrentUser(res);
             setLoggedIn(true);
-            getSaveMovies();
             navigate(location.pathname);
           }
         })
@@ -109,7 +107,18 @@ function App() {
 
   React.useEffect(() => {
     checkToken();
+    if (isLoggedIn) {
+      getSaveMovies();
+    }
   }, [isLoggedIn]);
+
+  React.useEffect(() => {
+    if (isLoggedIn) {
+      if (location.pathname === "/signup" || location.pathname === "/signin") {
+        navigate("/movies");
+      }
+    }
+  }, [isLoggedIn, location.pathname]);
 
   //==============================================================//
 
@@ -180,7 +189,8 @@ function App() {
   }, [search]);
 
   // Запрос и фильтрация массива карточек всех фильмов
-  const handleFirstSearch = () => {
+  const handleSearch = () => {
+    console.log("Всё идёт по плану! App");
     if (!localStorage.getItem("ArrayAllMovie")) {
       setIsLoading(true);
       moviesApi
@@ -264,7 +274,7 @@ function App() {
   return (
     <CurrentUserContext.Provider value={currentUser}>
       <div className="App">
-        <Header />
+        <Header isLoggedIn={isLoggedIn} />
         <Routes>
           <Route path="/" element={<Main />} />
           <Route
@@ -280,7 +290,7 @@ function App() {
                 isLoading={isLoading}
                 loadMoreMovie={loadMoreMovie}
                 isArrElement={isArrElement}
-                handleSearch={handleFirstSearch}
+                handleSearch={handleSearch}
                 handleAddSaveMovie={handleAddSaveMovie}
                 isLikedCard={isLikedCard}
                 handleDeleteSaveMovie={handleDeleteSaveMovie}

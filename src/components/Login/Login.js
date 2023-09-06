@@ -32,6 +32,7 @@ const Login = (props) => {
             value={values.email || ""}
             onChange={handleChange}
             placeholder="Email"
+            pattern="[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z0-9]+"
             required
           />
           <span className="signin__form_error">{errors.email}</span>
@@ -49,15 +50,17 @@ const Login = (props) => {
             required
           />
           <span className="signin__form_error">{errors.password}</span>
-          <div className={`${
-                isValid
-                  ? "signin__button"
-                  : "signin__button signin__button_disabled"
-              }`}>
-            <button type="submit" className="signin__link">
-              Войти
-            </button>
-          </div>
+          <button
+            type="submit"
+            aria-label="Войти"
+            className={`${
+              isValid
+                ? "signin__button"
+                : "signin__button signin__button_disabled"
+            }`}
+          >
+            Войти
+          </button>
         </form>
         <div className="signin__clue">
           <p className="signin__text">Ещё не зарегистрированы?</p>
@@ -68,6 +71,6 @@ const Login = (props) => {
       </div>
     </section>
   );
-}
+};
 
 export default Login;

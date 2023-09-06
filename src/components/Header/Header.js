@@ -4,37 +4,46 @@ import { Link, useLocation } from "react-router-dom";
 import headerLogo from "../../images/logo.svg";
 import accountLogo from "../../images//icon__account.svg";
 
-function Header() {
+function Header({ isLoggedIn }) {
   const location = useLocation();
-
   const [burgerButton, setBurgerButton] = React.useState(false);
+
+  const headerClassName = `${
+    location.pathname === "/" ? "header" : "header_dark"
+  }`;
+
   function handleBurgerClick() {
     setBurgerButton(!burgerButton);
   }
 
   return (
     <header>
-      {location.pathname === "/" && (
-        <section className="header">
-          <div className="header__container">
-            <Link to="/">
-              <img className="header__logo" src={headerLogo} alt="Логотип" />
-            </Link>
-            <div className="header__navbar">
-              <Link to="/signup" className="header__signup">
-                Регистрация
-              </Link>
-              <Link to="/signin" className="header__signin">
-                Войти
-              </Link>
-            </div>
-          </div>
-        </section>
-      )}
-      {(location.pathname === "/movies" ||
-        location.pathname === "/saved-movies" ||
-        location.pathname === "/profile") && (
-        <section className="header_dark">
+      {!isLoggedIn ? (
+        <>
+          {location.pathname === "/" && (
+            <section className={headerClassName}>
+              <div className="header__container">
+                <Link to="/">
+                  <img
+                    className="header__logo"
+                    src={headerLogo}
+                    alt="Логотип"
+                  />
+                </Link>
+                <div className="header__navbar">
+                  <Link to="/signup" className="header__signup">
+                    Регистрация
+                  </Link>
+                  <Link to="/signin" className="header__signin">
+                    Войти
+                  </Link>
+                </div>
+              </div>
+            </section>
+          )}
+        </>
+      ) : (
+        <section className={headerClassName}>
           <div className="header__container_dark">
             <Link to="/">
               <img className="header__logo" src={headerLogo} alt="Логотип" />
