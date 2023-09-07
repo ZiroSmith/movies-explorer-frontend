@@ -43,6 +43,8 @@ function App() {
   const [isSaveCards, setIsSaveCards] = React.useState([]);
   const [IsSearchInSaveMovies, setIsSearchInSaveMovies] = React.useState("");
   const [isErrorMovie, setIsErrorMovie] = React.useState(false);
+  const [isUpdate, setIsUpdate] = React.useState(false);
+  const [successMessage, setSuccessMessage] = React.useState("");
   const isOpenSaveMovie = location.pathname === "/saved-movies";
 
   //==============Блок функциональности профиля==================//
@@ -75,6 +77,11 @@ function App() {
       .then(() => {
         checkToken();
       })
+      .then(() => {
+        setIsUpdate(true);
+        setSuccessMessage("Данные успешно обновлены");
+        setTimeout(() => setSuccessMessage(""), 2000);
+      })
       .catch((err) => {
         console.log(err);
       });
@@ -102,11 +109,15 @@ function App() {
     setLoggedIn(false);
     setCards([]);
     setSearch("");
+    setIsSearchInSaveMovies("");
     navigate("/");
   }
 
   React.useEffect(() => {
     checkToken();
+  }, []);
+
+  React.useEffect(() => {
     if (isLoggedIn) {
       getSaveMovies();
     }
@@ -190,7 +201,6 @@ function App() {
 
   // Запрос и фильтрация массива карточек всех фильмов
   const handleSearch = () => {
-    console.log("Всё идёт по плану! App");
     if (!localStorage.getItem("ArrayAllMovie")) {
       setIsLoading(true);
       moviesApi
@@ -325,6 +335,8 @@ function App() {
                 element={Profile}
                 isLoggedIn={isLoggedIn}
                 handleEditProfile={handleEditProfile}
+                successMessage={successMessage}
+                isUpdate={isUpdate}
                 signOut={signOut}
               />
             }

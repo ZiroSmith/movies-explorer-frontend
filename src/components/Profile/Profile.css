@@ -153,8 +153,8 @@
   transition: 0.3s;
 }
 
-.profile__button_hide  {
-  display: none;
+.profile__button_disabled  {
+  background-color: #b2b4b6;
 }
 
 @media screen and (max-width: 1024px) {

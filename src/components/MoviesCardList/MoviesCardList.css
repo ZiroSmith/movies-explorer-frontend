@@ -28,6 +28,14 @@
   color: #FFF;
 }
 
+.movies__empty {
+  color: #FFF;
+  font-style: normal;
+  font-size: 34px;
+  font-weight: 400;
+  line-height: 36px;
+}
+
 .movies__container_save {
   justify-content: start;
   width: calc(100% - 140px);

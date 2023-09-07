@@ -8,8 +8,6 @@ function Profile(props) {
   const currentUser = React.useContext(CurrentUserContext);
   const [isSwitchButton, setSwitchButton] = React.useState(true);
   const [isEdit, setIsEdit] = React.useState(false);
-  const [isUpdate, setIsUpdate] = React.useState(false);
-  const [successMessage, setSuccessMessage] = React.useState("");
 
   React.useEffect(() => {
     setValues({
@@ -31,9 +29,6 @@ function Profile(props) {
   function handleSubmit(e) {
     e.preventDefault();
     props.handleEditProfile(values.name, values.email);
-    setIsUpdate(true);
-    setSuccessMessage("Данные успешно обновлены");
-    setTimeout(() => setSuccessMessage(""), 2000);
     setIsEdit(false);
   }
 
@@ -73,8 +68,8 @@ function Profile(props) {
               required
             />
           </label>
-          {isUpdate ? (
-            <span className="form__input__success">{successMessage}</span>
+          {props.isUpdate ? (
+            <span className="form__input__success">{props.successMessage}</span>
           ) : (
             <span className="form__input_error">{errors.email}</span>
           )}
@@ -85,9 +80,9 @@ function Profile(props) {
             type="submit"
             className={`${
               !isValid ||
-              values.name === currentUser.name ||
+              values.name === currentUser.name &&
               values.email === currentUser.email
-                ? "profile__button_save profile__button_hide"
+                ? "profile__button_save profile__button_disabled"
                 : "profile__button_save"
             }`}
             disabled={

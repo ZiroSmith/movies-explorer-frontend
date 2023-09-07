@@ -103,6 +103,7 @@
 }
 
 .register__link {
+  width: 100%;
   text-align: center;
   border: none;
   color: #fff;
