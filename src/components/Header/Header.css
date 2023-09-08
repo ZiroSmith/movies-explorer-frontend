@@ -25,8 +25,18 @@
   height: 74px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   margin: 0 auto;
+}
+
+.header__menu {
+  padding: 0;
+  width: 100%;
+  height: 74px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  margin-left: 33%;
 }
 
 .header__logo {
@@ -39,7 +49,6 @@
   gap: 24px;
   justify-content: center;
   align-items: center;
-  margin-left: 308px;
 }
 
 .header__navbar_dark {
@@ -49,6 +58,7 @@
 .header__link {
   margin: 0;
   padding: 0;
+  color: #FFF;
   font-style: normal;
   font-weight: 400;
   font-size: 13px;
@@ -56,8 +66,14 @@
   text-decoration: none;
 }
 
-.header__link_dark {
-  margin-left: 120px;
+.header__link:visited {
+  color: white;
+}
+
+.header__link:hover {
+  opacity: 0.5;
+  transition: 0.3s;
+  cursor: pointer;
 }
 
 .header__link_active {
@@ -108,16 +124,6 @@
   height: 36px;
 }
 
-.header__link:visited {
-  color: white;
-}
-
-.header__link:hover {
-  opacity: 0.5;
-  transition: 0.3s;
-  cursor: pointer;
-}
-
 .header__signup {
   margin: 0;
   padding: 0;
@@ -162,22 +168,13 @@
 
 .header__burger {
   display: none;
+  margin-top: 15px;
 }
 
-.header__menu {
-  padding: 0;
-  max-width: 1280px;
-  width: 100%;
-  height: 74px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0 auto;
-}
-
-.header__menu_light {
-  justify-content: end;
-  gap: 40px;
+@media screen and (max-width: 1140px) {
+  .header__menu {
+    margin-left: 31%;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -299,7 +296,7 @@
   }
 
   .header__link_container {
-    margin: 618px 226px 0;
+    margin: 418px 226px 0;
     padding: 0;
     font-size: 13px;
     line-height: 12px;
@@ -381,7 +378,7 @@
   }
 
   .header__link_container {
-    margin: 438px 122px 0;
+    margin: 418px 122px 0;
   }
 
   .header__link_text {

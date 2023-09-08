@@ -49,6 +49,20 @@ function App() {
 
   //==============Блок функциональности профиля==================//
 
+  //Выход из аккаунта
+  function signOut() {
+    localStorage.clear();
+    setLoggedIn(false);
+    setCards([]);
+    setIsSaveCards([]);
+    setSearch("");
+    setIsToggled(false);
+    setIsToggledSaveMovie(false);
+    setIsSearchInSaveMovies("");
+    setIsErrorMovie(false);
+    navigate("/");
+  }
+
   // Регистрация
   const handleRegister = (name, email, password) => {
     return Auth.register(name, email, password)
@@ -102,16 +116,6 @@ function App() {
         .catch((err) => console.log(`${err}`));
     }
   };
-
-  //Выход из аккаунта
-  function signOut() {
-    localStorage.clear();
-    setLoggedIn(false);
-    setCards([]);
-    setSearch("");
-    setIsSearchInSaveMovies("");
-    navigate("/");
-  }
 
   React.useEffect(() => {
     checkToken();

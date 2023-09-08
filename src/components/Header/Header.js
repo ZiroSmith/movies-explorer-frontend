@@ -3,7 +3,6 @@ import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import headerLogo from "../../images/logo.svg";
 import accountLogo from "../../images/icon__account.svg";
-import accountLogo_2 from "../../images/account_logo.svg";
 
 function Header({ isLoggedIn }) {
   const location = useLocation();
@@ -74,19 +73,19 @@ function Header({ isLoggedIn }) {
                   </button>
                   <div
                     className={`${
-                      location.pathname === "/"
-                        ? burgerButton
-                          ? "header__menu header__menu_light header__menu_open"
-                          : "header__menu header__menu_light"
-                        : burgerButton
-                        ? "header__menu  header__menu_open"
+                      burgerButton
+                        ? "header__menu header__menu_open"
                         : "header__menu"
                     }`}
                   >
                     <div className="header__navbar header__navbar_dark">
                       <Link
                         to="/"
-                        className="header__link header__link_dark header__link_home"
+                        className={`${
+                          location.pathname === "/"
+                            ? "header__link header__link_home header__link_active"
+                            : "header__link header__link_home"
+                        }`}
                       >
                         Главная
                       </Link>
@@ -94,8 +93,8 @@ function Header({ isLoggedIn }) {
                         to="/movies"
                         className={`${
                           location.pathname === "/movies"
-                            ? "header__link header__link_dark header__link_active"
-                            : "header__link header__link_dark"
+                            ? "header__link header__link_active"
+                            : "header__link "
                         }`}
                       >
                         Фильмы
@@ -111,32 +110,19 @@ function Header({ isLoggedIn }) {
                         Сохранённые фильмы
                       </Link>
                     </div>
-                    {location.pathname === "/" ? (
-                      <Link
-                        to="/profile"
-                        className="header__link header__link_container"
-                      >
+                    <Link
+                      to="/profile"
+                      className="header__link header__link_container"
+                    >
+                      <p className="header__link_text">Аккаунт</p>
+                      <div className="header__logo_container">
                         <img
-                          className="header__account_logo"
-                          src={accountLogo_2}
+                          className="header__link_logo"
+                          src={accountLogo}
                           alt="Логотип аккаунта"
                         />
-                      </Link>
-                    ) : (
-                      <Link
-                        to="/profile"
-                        className="header__link header__link_container"
-                      >
-                        <p className="header__link_text">Аккаунт</p>
-                        <div className="header__logo_container">
-                          <img
-                            className="header__link_logo"
-                            src={accountLogo}
-                            alt="Логотип аккаунта"
-                          />
-                        </div>
-                      </Link>
-                    )}
+                      </div>
+                    </Link>
                   </div>
                 </div>
               </section>
