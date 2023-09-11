@@ -79,7 +79,7 @@ function App() {
   const handleLogin = (email, password) => {
     return Auth.authorize(email, password).then((data) => {
       localStorage.setItem("token", data.token);
-      setLoggedIn(true);
+      checkToken();
       navigate("/movies");
     });
   };

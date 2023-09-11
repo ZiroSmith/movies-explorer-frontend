@@ -41,11 +41,13 @@ function Movies({
               handleDeleteSaveMovie={handleDeleteSaveMovie}
               isErrorMovie={isErrorMovie}
             />
-            <ButtonAddMovie
-              cards={cards}
-              loadMoreMovie={loadMoreMovie}
-              isArrElement={isArrElement}
-            />
+            {isArrElement > 99 ? null : (
+              <ButtonAddMovie
+                cards={cards}
+                loadMoreMovie={loadMoreMovie}
+                isArrElement={isArrElement}
+              />
+            )}
           </>
         )}
       </section>

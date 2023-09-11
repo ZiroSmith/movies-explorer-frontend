@@ -65,6 +65,7 @@ function Profile(props) {
               minLength={2}
               maxLength={30}
               pattern="[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z0-9]+"
+              //pattern="[a-zA-Z0-9_.]+@[a-zA-Z0-9_]+\\.[a-z]{2,}"
               required
             />
           </label>

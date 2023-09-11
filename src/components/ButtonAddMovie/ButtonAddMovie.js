@@ -3,7 +3,7 @@ import "./ButtonAddMovie.css";
 function ButtonAddMovie({ loadMoreMovie, cards, isArrElement }) {
   return (
     <>
-      {isArrElement > 99 ? null : (
+      {isArrElement > cards.length ? null : (
         <button
           className="movies__button"
           type="button"
