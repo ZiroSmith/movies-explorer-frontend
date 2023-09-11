@@ -15,6 +15,12 @@ import * as Auth from "../../utils/auth.js";
 import mainApi from "../../utils/MainApi.js";
 import moviesApi from "../../utils/MoviesApi.js";
 import ProtectedRouteElement from "../ProtectedRoute/ProtectedRoute";
+import {
+  ADD_FOUR_MOVIE_QUANTITY,
+  ADD_TWO_MOVIE_QUANTITY,
+  BIG_MOVIE_QUANTITY,
+  MEDIUM_MOVIE_QUANTITY,
+} from "../../utils/constans";
 
 function App() {
   const navigate = useNavigate();
@@ -186,14 +192,14 @@ function App() {
   // Кол-во карточек фильмов на экране юзера (зависит от разрешения)
   const quantityElements = () => {
     if (windowElement.clientWidth >= 1280) {
-      return 12;
+      return BIG_MOVIE_QUANTITY;
     } else if (
       windowElement.clientWidth < 1280 &&
       windowElement.clientWidth >= 650
     ) {
-      return 8;
+      return MEDIUM_MOVIE_QUANTITY;
     } else {
-      return 12;
+      return BIG_MOVIE_QUANTITY;
     }
   };
 
@@ -272,14 +278,14 @@ function App() {
   // Кнопка "Добавить ещё фильмов"
   const loadMoreMovie = () => {
     if (windowElement.clientWidth >= 1280) {
-      setIsArrElement(isArrElement + 4);
+      setIsArrElement(isArrElement + ADD_FOUR_MOVIE_QUANTITY);
     } else if (
       windowElement.clientWidth < 1280 &&
       windowElement.clientWidth >= 650
     ) {
-      setIsArrElement(isArrElement + 2);
+      setIsArrElement(isArrElement + ADD_TWO_MOVIE_QUANTITY);
     } else {
-      setIsArrElement(isArrElement + 2);
+      setIsArrElement(isArrElement + ADD_TWO_MOVIE_QUANTITY);
     }
   };
 

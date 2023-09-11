@@ -3,6 +3,7 @@ import "./Register.css";
 import { Link } from "react-router-dom";
 import { useValidation } from "../../hooks/useFormAndValidation";
 import headerLogo from "../../images/logo.svg";
+import { EMAIL_REGEX } from "../../utils/constans";
 
 const Register = (props) => {
   const { values, isValid, handleChange, errors } = useValidation();
@@ -42,7 +43,7 @@ const Register = (props) => {
             value={values.email || ""}
             onChange={handleChange}
             type="email"
-            pattern="[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z0-9]+"
+            pattern={EMAIL_REGEX}
             placeholder="Email"
             required
           />

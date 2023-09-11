@@ -2,6 +2,7 @@ import React from "react";
 import "./Profile.css";
 import { useValidation } from "../../hooks/useFormAndValidation";
 import { CurrentUserContext } from "../../contexts/CurrentUserContext";
+import { EMAIL_REGEX } from "../../utils/constans";
 
 function Profile(props) {
   const { values, isValid, handleChange, setValues, errors } = useValidation();
@@ -64,8 +65,7 @@ function Profile(props) {
               name="email"
               minLength={2}
               maxLength={30}
-              pattern="[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z0-9]+"
-              //pattern="[a-zA-Z0-9_.]+@[a-zA-Z0-9_]+\\.[a-z]{2,}"
+              pattern={EMAIL_REGEX}
               required
             />
           </label>
