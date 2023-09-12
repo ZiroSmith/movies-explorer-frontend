@@ -19,8 +19,9 @@ import {
   ADD_FOUR_MOVIE_QUANTITY,
   ADD_FREE_MOVIE_QUANTITY,
   ADD_TWO_MOVIE_QUANTITY,
-  BIG_MOVIE_QUANTITY,
-  MEDIUM_MOVIE_QUANTITY,
+  QUANTITY_MOVIE_12,
+  QUANTITY_MOVIE_9,
+  QUANTITY_MOVIE_8,
 } from "../../utils/constans";
 
 function App() {
@@ -192,15 +193,15 @@ function App() {
 
   // Кол-во карточек фильмов на экране юзера (зависит от разрешения)
   const quantityElements = () => {
-    if (windowElement.clientWidth >= 1280) {
-      return BIG_MOVIE_QUANTITY;
+    if (windowElement.clientWidth >= 1140) {
+      return QUANTITY_MOVIE_12;
     } else if (
-      windowElement.clientWidth < 1280 &&
-      windowElement.clientWidth >= 650
+      windowElement.clientWidth < 1140 &&
+      windowElement.clientWidth >= 1025
     ) {
-      return MEDIUM_MOVIE_QUANTITY;
+      return QUANTITY_MOVIE_9;
     } else {
-      return BIG_MOVIE_QUANTITY;
+      return QUANTITY_MOVIE_8;
     }
   };
 
@@ -209,6 +210,20 @@ function App() {
   React.useEffect(() => {
     setIsArrElement(quantityElements);
   }, [search]);
+
+   // Кнопка "Добавить ещё фильмов"
+  const loadMoreMovie = () => {
+    if (windowElement.clientWidth >= 1140) {
+      setIsArrElement(isArrElement + ADD_FOUR_MOVIE_QUANTITY);
+    } else if (
+      windowElement.clientWidth < 1140 &&
+      windowElement.clientWidth >= 1025
+    ) {
+      setIsArrElement(isArrElement + ADD_FREE_MOVIE_QUANTITY);
+    } else {
+      setIsArrElement(isArrElement + ADD_TWO_MOVIE_QUANTITY);
+    }
+  };
 
   // Запрос и фильтрация массива карточек всех фильмов
   const handleSearch = () => {
@@ -274,20 +289,6 @@ function App() {
     return handleSearchInSavedMovie(isSaveCards).some(
       (item) => item.movieId === card.id
     );
-  };
-
-  // Кнопка "Добавить ещё фильмов"
-  const loadMoreMovie = () => {
-    if (windowElement.clientWidth >= 1140) {
-      setIsArrElement(isArrElement + ADD_FOUR_MOVIE_QUANTITY);
-    } else if (
-      windowElement.clientWidth < 1140 &&
-      windowElement.clientWidth >= 1025
-    ) {
-      setIsArrElement(isArrElement + ADD_FREE_MOVIE_QUANTITY);
-    } else {
-      setIsArrElement(isArrElement + ADD_TWO_MOVIE_QUANTITY);
-    }
   };
 
   //==============================================================//
