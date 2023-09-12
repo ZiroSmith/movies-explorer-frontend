@@ -17,6 +17,7 @@ import moviesApi from "../../utils/MoviesApi.js";
 import ProtectedRouteElement from "../ProtectedRoute/ProtectedRoute";
 import {
   ADD_FOUR_MOVIE_QUANTITY,
+  ADD_FREE_MOVIE_QUANTITY,
   ADD_TWO_MOVIE_QUANTITY,
   BIG_MOVIE_QUANTITY,
   MEDIUM_MOVIE_QUANTITY,
@@ -277,13 +278,13 @@ function App() {
 
   // Кнопка "Добавить ещё фильмов"
   const loadMoreMovie = () => {
-    if (windowElement.clientWidth >= 1280) {
+    if (windowElement.clientWidth >= 1140) {
       setIsArrElement(isArrElement + ADD_FOUR_MOVIE_QUANTITY);
     } else if (
-      windowElement.clientWidth < 1280 &&
-      windowElement.clientWidth >= 650
+      windowElement.clientWidth < 1140 &&
+      windowElement.clientWidth >= 1025
     ) {
-      setIsArrElement(isArrElement + ADD_TWO_MOVIE_QUANTITY);
+      setIsArrElement(isArrElement + ADD_FREE_MOVIE_QUANTITY);
     } else {
       setIsArrElement(isArrElement + ADD_TWO_MOVIE_QUANTITY);
     }
