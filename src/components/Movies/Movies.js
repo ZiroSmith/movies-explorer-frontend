@@ -1,6 +1,5 @@
 import React from "react";
 import "./Movies.css";
-import ButtonAddMovie from "../ButtonAddMovie/ButtonAddMovie";
 import SearchForm from "../SearchForm/SearchForm";
 import Preloader from "../Preloader/Preloader";
 import MoviesCardList from "../MoviesCardList/MoviesCardList";
@@ -19,6 +18,7 @@ function Movies({
   isLikedCard,
   handleDeleteSaveMovie,
   isErrorMovie,
+  filteredCards,
 }) {
   return (
     <main className="movies">
@@ -41,12 +41,16 @@ function Movies({
               handleDeleteSaveMovie={handleDeleteSaveMovie}
               isErrorMovie={isErrorMovie}
             />
-            {isArrElement > 99 ? null : (
-              <ButtonAddMovie
-                cards={cards}
-                loadMoreMovie={loadMoreMovie}
-                isArrElement={isArrElement}
-              />
+            {isArrElement >= filteredCards.length ? (
+              null
+            ) : (
+              <button
+                className="movies__button"
+                type="button"
+                onClick={loadMoreMovie}
+              >
+                Ещё
+              </button>
             )}
           </>
         )}

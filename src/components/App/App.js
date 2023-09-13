@@ -306,6 +306,7 @@ function App() {
                 element={Movies}
                 isLoggedIn={isLoggedIn}
                 cards={filterMovieInPage(cards).slice(0, isArrElement)}
+                filteredCards={filterMovieInPage(cards)}
                 search={search}
                 setSearch={setSearch}
                 isErrorMovie={isErrorMovie}
