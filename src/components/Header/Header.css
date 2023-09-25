@@ -1,0 +1,399 @@
+.header {
+  background-color: #073042;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.header_dark {
+  background-color: #202020;
+}
+
+.header__container {
+  background-color: inherit;
+  max-width: 1280px;
+  width: 100%;
+  height: 74px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.header__container_dark {
+  background-color: inherit;
+  max-width: 1280px;
+  width: 100%;
+  height: 74px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.header__menu {
+  padding: 0;
+  width: 100%;
+  height: 74px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  margin-left: 33%;
+}
+
+.header__logo {
+  max-width: 38px;
+  margin: 18px 0 18px 70px;
+}
+
+.header__navbar {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__navbar_dark {
+  gap: 16px;
+}
+
+.header__link {
+  margin: 0;
+  padding: 0;
+  color: #FFF;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
+  text-decoration: none;
+}
+
+.header__link:visited {
+  color: white;
+}
+
+.header__link:hover {
+  opacity: 0.5;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.header__link_active {
+  font-weight: 500;
+}
+
+.header__link_home {
+  display: none;
+}
+
+.header__link_container {
+  margin: 0;
+  margin-right: 75px;
+  padding: 0;
+  display: flex;
+  gap: 7px;
+  align-items: center;
+}
+
+.header__link_text {
+  margin: 0;
+  padding: 0;
+}
+
+.header__logo_container {
+  margin: 0;
+  padding: 0;
+  background-color: #313131;
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__link_logo {
+  margin: 0;
+  padding: 0;
+  width: 12px;
+  height: 12px;
+}
+
+.header__account_logo {
+  margin: 0;
+  padding: 0;
+  width: 110px;
+  height: 36px;
+}
+
+.header__signup {
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
+  text-decoration: none;
+}
+
+.header__signup:visited {
+  color: white;
+}
+
+.header__signup:hover {
+  opacity: 0.5;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.header__signin {
+  margin: 0 70px 0 0;
+  padding: 0;
+  width: 76px;
+  height: 32px;
+  border-radius: 3px;
+  background-color: #3ddc84;
+  justify-content: center;
+  text-decoration: none;
+  color: black;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 34px;
+}
+
+.header__signin:hover {
+  opacity: 0.5;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.header__burger {
+  display: none;
+  margin-top: 15px;
+}
+
+@media screen and (max-width: 1140px) {
+  .header__menu {
+    margin-left: 31%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .header__logo {
+    margin: 18px 0 18px 30px;
+  }
+
+  .header__navbar {
+    margin-right: 30px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .header__burger {
+    display: block;
+    position: relative;
+    width: 28px;
+    height: 20px;
+    right: 38px;
+    background-color: transparent;
+    border: none;
+    z-index: 5;
+  }
+
+  .header__burger span {
+    background-color: #fff;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    top: 9px;
+    transition: all 0.3s ease 0s;
+    z-index: 5;
+  }
+
+  .header__burger::before,
+  .header__burger::after {
+    content: "";
+    background-color: #fff;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    transition: all 0.3s ease 0s;
+    z-index: 5;
+  }
+  .header__burger::before {
+    top: 0;
+    z-index: 5;
+  }
+  .header__burger::after {
+    bottom: 0;
+    z-index: 5;
+  }
+
+  .header__burger_open {
+    right: 22px;
+    z-index: 5;
+  }
+
+  .header__burger_open::before {
+    transform: rotate(45deg);
+    top: 10px;
+    width: 22px;
+    z-index: 5;
+  }
+  .header__burger_open::after {
+    transform: rotate(-45deg);
+    bottom: 8px;
+    width: 22px;
+    z-index: 5;
+  }
+  .header__burger_open span {
+    transform: scale(0);
+    z-index: 5;
+  }
+
+  .header__menu {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: -200%;
+    width: 520px;
+    height: 1024px;
+    background-color: #202020;
+    transition: all 0.5s ease 0s;
+    z-index: 4;
+  }
+
+  .header__menu_open {
+    right: 0;
+  }
+
+  .header__navbar_dark {
+    gap: 10px;
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .header__signin {
+    margin: 0;
+  }
+
+  .header__link {
+    margin: 17px 0 0;
+    padding: 0 0 2px;
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .header__link_home {
+    display: block;
+    margin: 159px 0 0;
+  }
+
+  .header__link_active {
+    font-weight: 400;
+    border-bottom: 1px solid #fff;
+  }
+
+  .header__link_container {
+    margin: 418px 226px 0;
+    padding: 0;
+    font-size: 13px;
+    line-height: 12px;
+  }
+
+  .header__logo_container {
+    width: 26px;
+    height: 26px;
+  }
+
+  .header__link_logo {
+    width: 32px;
+    height: 12px;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .header__burger {
+    width: 22px;
+    height: 20px;
+    z-index: 5;
+    right: 22px;
+  }
+
+  .header__burger_open {
+    right: 18px;
+  }
+
+  .header__burger_open::before {
+    top: 0;
+  }
+  .header__burger_open::after {
+    bottom: 18px;
+  }
+
+  .header__menu {
+    right: -200%;
+    width: 320px;
+    height: 100%;
+    z-index: 4;
+  }
+
+  .header__menu_open {
+    right: 0;
+  }
+
+  .header__logo {
+    margin: 18px 0 18px 14px;
+  }
+
+  .header__navbar {
+    margin: 0;
+    gap: 14px;
+  }
+
+  .header__link {
+    margin-top: 3px;
+    padding: 0 0 6px;
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .header__link_home {
+    display: block;
+    margin: 146px 0 0;
+  }
+
+  .header__signup {
+    font-size: 10px;
+    line-height: 16px;
+  }
+
+  .header__signin {
+    width: 54px;
+    height: 26px;
+    font-size: 10px;
+    line-height: 26px;
+    margin-right: 14px;
+  }
+
+  .header__link_container {
+    margin: 418px 122px 0;
+  }
+
+  .header__link_text {
+    font-size: 13px;
+    line-height: 12px;
+  }
+
+  .header__logo_container {
+    width: 26px;
+    height: 26px;
+  }
+
+  .header__link_logo {
+    width: 31px;
+    height: 12px;
+  }
+}

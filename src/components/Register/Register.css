@@ -1,0 +1,209 @@
+.register {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.register__container {
+  padding: 0;
+  margin: 0 auto;
+  max-width: 396px;
+}
+
+.register__logo {
+  padding: 0;
+  margin: 70px 0 0;
+  display: block;
+}
+
+.register__welcome {
+  text-align: left;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  max-width: 396px;
+  margin: 40px auto 30px;
+  padding: 0;
+}
+
+.register__form {
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 396px;
+}
+
+.register__form_label {
+  margin: 10px 0 0;
+  padding: 0;
+  color: #8b8b8b;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12px;
+  text-align: left;
+}
+
+.register__form__input {
+  color: white;
+  background-color: #2f2f2f;
+  border: none;
+  border-radius: 5px;
+  width: 396px;
+  height: 46px;
+  box-sizing: border-box;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  margin: 10px 0 0;
+  padding: 15px;
+}
+
+.register__form__input:focus {
+  outline: none;
+  outline: 1px solid #34c6f3;
+}
+
+.register__form_error {
+  color: #ee3465;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12px;
+  text-align: left;
+  padding: 10px 0 0;
+  margin: 0;
+}
+
+.register__button {
+  display: flex;
+  justify-content: center;
+  margin: 69px 0 0;
+  background-color: #4285f4;
+  max-width: 396px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.register__button:hover {
+  opacity: 0.5;
+  transition: 0.3s;
+}
+
+.register__button_disabled {
+  background-color: #b2b4b6;
+}
+
+.register__link {
+  width: 100%;
+  text-align: center;
+  border: none;
+  color: #fff;
+  background-color: inherit;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  margin: 0;
+  padding: 0;
+  min-height: 45px;
+  cursor: pointer;
+}
+
+.register__clue {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2px 0 56px;
+}
+
+.register__text {
+  margin-right: 7px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #8b8b8b;
+}
+
+.register__login-link {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #4285f4;
+  text-decoration: none;
+}
+
+.register__login-link:hover {
+  opacity: 0.5;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1024px) {
+  .register__logo {
+    margin: 232px 0 0;
+  }
+
+  .register__clue {
+    margin: 2px 0 256px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .register__container {
+    max-width: 260px;
+  }
+
+  .register__logo {
+    margin: 56px 0 0 110px;
+  }
+
+  .register__welcome {
+    text-align: center;
+    max-width: 260px;
+    margin: 50px auto 30px;
+  }
+
+  .register__form {
+    max-width: 260px;
+    margin: 70px auto 0;
+  }
+
+  .register__form__input {
+    max-width: 260px;
+  }
+
+  .register__button {
+    margin: 158px 0 0;
+    max-width: 260px;
+  }
+
+  .register__link {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .register__clue {
+    margin: 2px 0 56px;
+  }
+
+  .register__text {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .register__login-link {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}

@@ -1,9 +1,19 @@
-# movies-explorer-api
+# Макет - Dark-5
 
 # Проект «Movies»
 
-## Для чего я создан?
-### *Проект ознакомит Вас с множеством интересных фильмов.*
+# Ссылки на проект
+IP 158.160.118.87
+
+Frontend: https://zeromovies.nomoredomainsicu.ru
+
+Backend: https://api.zeromovies.nomoreparties.sbs
+
+## Pull request
+https://github.com/ZiroSmith/movies-explorer-frontend/pull/2
+
+## Адрес репозитория фронтенда: https://github.com/ZiroSmith/movies-explorer-frontend
+## Адрес репозитория бэкенда: https://github.com/ZiroSmith/movies-explorer-api
 
 ### Репозиторий для приложения проекта Movies, включающий фронтенд и бэкенд части приложения со следующими возможностями: авторизации и регистрации пользователей, операции с карточками и пользователями.
 
@@ -15,15 +25,6 @@
 ### Flex - свойства
 ### Адаптивность для разных разрешений экранов при просмотре
 
-## Адрес репозитория бэкенда: https://github.com/ZiroSmith/movies-explorer-api
-## Адрес репозитория фронтенда: *---*
-
-## Ссылки на проект
-IP 158.160.118.87
-
-Frontend *---*
-
-Backend api.zeromovies.nomoreparties.sbs
 
 *Всё, что вам нужно для использования - браузер, приятного просмотра!*
 
